@@ -8,7 +8,7 @@ st.header("Custom tab component for on-hover navigation bar")
 
 
 with st.sidebar:
-    tabs = on_hover_tabs(name=['Dashboard', 'Money', 'Economy'], 
+    tabs = on_hover_tabs(tabname=['Dashboard', 'Home', 'Lifes'], 
                          iconName=['dashboard', 'money', 'economy'], default_choice=0)
 
 if tabs =='Dashboard':
