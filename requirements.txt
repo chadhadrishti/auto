@@ -1,3 +1,2 @@
 streamlit==1.25.0
-python==3.6
 streamlit_on_Hover_tabs ==0.0.2
