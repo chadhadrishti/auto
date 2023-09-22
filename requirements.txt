@@ -1,2 +1,2 @@
 streamlit==1.25.0
-streamlit_on_Hover_tabs ==0.0.2
+streamlit_on_Hover_tabs ==1.0.1
