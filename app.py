@@ -8,18 +8,18 @@ st.header("Custom tab component for on-hover navigation bar")
 
 
 with st.sidebar:
-    tabs = on_hover_tabs(tabname=['Dashboard', 'Home', 'Likes'], 
-                         iconName=['dashboard', 'money', 'economy'], default_choice=0)
+    tabs = on_hover_tabs(tabName=['Dashboard', 'Home', 'Likes'], 
+                         iconName=['dashboard', 'money', 'economy'])
 
-if tabs =='Dashboard':
-    st.title("Navigation Bar")
-    st.write('Name of option is {}'.format(tabs))
+# if tabs =='Dashboard':
+#     st.title("Navigation Bar")
+#     st.write('Name of option is {}'.format(tabs))
 
-elif tabs == 'Money':
-    st.title("Paper")
-    st.write('Name of option is {}'.format(tabs))
+# elif tabs == 'Money':
+#     st.title("Paper")
+#     st.write('Name of option is {}'.format(tabs))
 
-elif tabs == 'Economy':
-    st.title("Tom")
-    st.write('Name of option is {}'.format(tabs))
+# elif tabs == 'Economy':
+#     st.title("Tom")
+#     st.write('Name of option is {}'.format(tabs))
     
