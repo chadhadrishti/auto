@@ -4,6 +4,8 @@ import streamlit as st
 st.set_page_config(layout="wide")
 
 st.header("Automotive Customer Review Analysis")
+st.write("Turn every review into a pit stop for improvement with our Automotive Review Analysis App – where user feedback fuels your success.")
+st.markdown(f'<h1 style="color:#33ff33;font-size:24px;">{"Turn every review into a pit stop for improvement with our Automotive Review Analysis App – where user feedback fuels your success.”"}</h1>', unsafe_allow_html=True)
 st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
 
 with st.sidebar:
