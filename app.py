@@ -6,7 +6,7 @@ st.write(f'<h1 style="color:#EC2A39;font-size:22px;">{"*Automotive Customer Revi
 # st.header("*Automotive Customer Review Analysis*")
 # st.write("Turn every review into a pit stop for improvement with our Automotive Review Analysis App – where user feedback fuels your success.")
 st.write(f'<h1 style="color:#EC2A39;font-size:15px;">{"Turn every review into a pit stop for improvement with our Automotive Review Analysis App – where user feedback fuels your success."}</h1>', unsafe_allow_html=True)
-st.line{border-bottom: 1px solid #888;}
+st.line(border-bottom: 1px solid #888;)
 st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
 
 with st.sidebar:
