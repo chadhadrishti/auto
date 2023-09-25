@@ -30,6 +30,7 @@ with st.sidebar:
 
 
 if tabs =='Home':
+        sac.divider(label='🏠', align='center')
         st.write(f'<h1 style="margin-top:-40px;text-align: center;color:#094780;font-size:15px;">{"Key Take Aways : Topics being discussed | Likes in the SKUs | Dislikes in the SKUs | Customer Sentiment | Competitive Analysis | Major Keywords | Subtopics across different automotive Key Factors"}</h1>', unsafe_allow_html=True)
         st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:15px;">{"Select the Brand for which you would like to see the Report :"}</h1>', unsafe_allow_html=True)
         st.image('Picture1.png', use_column_width=True)
@@ -38,31 +39,38 @@ if tabs =='Home':
     # st.write('Suzuki/Honda/TVS'.format(tabs))
 
 elif tabs == 'EDA':
+        sac.divider(label='📊', align='center')
         st.title("EDA")
         st.write('Add wcloud and some charts'.format(tabs))
     
 
 elif tabs == 'Topic Analysis':
+        sac.divider(label='💡', align='center')
         st.title("Topics")
         st.write('7 key topics'.format(tabs))
 
 elif tabs == 'Subtopics':
+        sac.divider(label='📝', align='center')
         st.title("Subtopics")
         st.write('20 sub topics'.format(tabs)) 
 
 elif tabs == 'Likes':
+        sac.divider(label='👍', align='center')
         st.title("Likes")
         st.write('Likes/topic'.format(tabs))
 
 elif tabs == 'Dislikes':
+        sac.divider(label='👎', align='center')
         st.title("Dislikes")
         st.write('Dislikes/topic'.format(tabs))
 
 elif tabs == 'Sentiment':
+        sac.divider(label='💭', align='center')
         st.title("Customer Sentiment")
         st.write('Customer Sentiment'.format(tabs))
 
 elif tabs == 'Competition':
+        sac.divider(label='🏆', align='center')
         st.title("Competition")
         st.write('Competition - Suzuki/Honda/TVS'.format(tabs))
     
