@@ -10,10 +10,10 @@ st.write(f'<h1 style="margin-top:-55px;color:#EC2A39;font-size:15px;">{"Turn eve
 st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
 sac.chip(
     items=[
-        sac.ChipItem(label='Suzuki', icon='suzuki'),
-        sac.ChipItem(label='Honda', icon='honda'),
-        sac.ChipItem(label='TVS', icon='tvs'),
-    ], label='Brands', index=[0, 2], format_func='title', align='center', return_index=True
+        sac.ChipItem(label='Suzuki', icon='bike'),
+        sac.ChipItem(label='Honda', icon='bike'),
+        sac.ChipItem(label='TVS', icon='bike'),
+    ], label='Brands', index=[0, 2], format_func='title', align='left', return_index=True
 )
 st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
 # sac.divider(label='🏠', align='center')
