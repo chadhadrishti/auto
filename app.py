@@ -29,7 +29,7 @@ with st.sidebar:
 
 
 if tabs =='Home':
-        st.subheader("*Select the Brand for which you'd like to see the Report :*")
+        st.write(f'<h1 style="color:#EC2A39;font-size:15px;">{"*Select the Brand for which you'd like to see the Report :*"}</h1>', unsafe_allow_html=True)
         st.write('Suzuki/Honda/TVS'.format(tabs))
 
 elif tabs == 'EDA':
