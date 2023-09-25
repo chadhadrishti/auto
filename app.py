@@ -30,7 +30,7 @@ with st.sidebar:
 
 if tabs =='Home':
         st.write(f'<h1 style="text-align: center;color:#9FACB8;font-size:15px;">{"Select the Brand for which you would like to see the Report :"}</h1>', unsafe_allow_html=True)
-        st.image('Brands_pb.png', use_column_width=True)
+        st.image('Picture1.png', use_column_width=True)
     # st.write('Suzuki/Honda/TVS'.format(tabs))
 
 elif tabs == 'EDA':
