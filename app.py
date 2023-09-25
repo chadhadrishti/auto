@@ -8,10 +8,25 @@ st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_ht
 
 with st.sidebar:
     tabs = on_hover_tabs(tabName=['Home', 'EDA','Topic Analysis','Subtopics', 'Likes','Dislikes','Sentiment','Competition'], 
-                         iconName=['🏠', '📊','💡', '📝','👍','👎','💭','🏆'], default_choice =1)
+                         iconName=['🏠', '📊','💡', '📝','👍','👎','💭','🏆'], 
+                         styles = {'navtab': {'background-color':'#111',
+                                                  'color': '#818181',
+                                                  'font-size': '18px',
+                                                  'transition': '.3s',
+                                                  'white-space': 'nowrap',
+                                                  'text-transform': 'uppercase'},
+                                   'tabOptionsStyle': {':hover :hover': {'color': 'red',
+                                                                      'cursor': 'pointer'}},
+                                   'iconStyle':{'position':'fixed',
+                                                    'left':'7.5px',
+                                                    'text-align': 'left'},
+                                   'tabStyle' : {'list-style-type': 'none',
+                                                     'margin-bottom': '30px',
+                                                     'padding-left': '30px'}},
+                         key="1")
 
-# if tabs =='Dashboard':
-#     st.title("Navigation Bar")
+# if tabs =='Home':
+#     st.title("Home")
 #     st.write('Name of option is {}'.format(tabs))
 
 # elif tabs == 'Money':
