@@ -1,6 +1,6 @@
 section[data-testid='stSidebar'] {
     background-color: #000;
-    flex-shrink: unset !important;
+/*     flex-shrink: unset !important; */
     
 }
 
