@@ -3,7 +3,7 @@ import streamlit as st
 
 st.set_page_config(layout="wide")
 
-# st.header("Custom tab component for on-hover navigation bar")
+st.header("Custom tab component for on-hover navigation bar")
 st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
 
 with st.sidebar:
@@ -23,18 +23,18 @@ with st.sidebar:
                                    'tabStyle' : {'list-style-type': 'none',
                                                      'margin-bottom': '30px',
                                                      'padding-left': '30px'}},
-                         key="1")
-    tabs
+                         default_choice=0)
 
-    if tabs =='Home':
+
+if tabs =='Home':
         st.title("Home")
         st.write('Name of option is'.format(tabs))
 
-    elif tabs == 'EDA':
+elif tabs == 'EDA':
         st.title("Paper")
         st.write('Name of option is'.format(tabs))
 
-    elif tabs == 'Topic Analysis':
+elif tabs == 'Topic Analysis':
         st.title("Tom")
         st.write('Name of option is'.format(tabs))
     
