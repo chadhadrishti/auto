@@ -29,7 +29,7 @@ with st.sidebar:
 
 
 if tabs =='Home':
-        st.title("brands")
+        st.subheader("*Select the Brand for which you'd like to see the Report :*")
         st.write('Suzuki/Honda/TVS'.format(tabs))
 
 elif tabs == 'EDA':
