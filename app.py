@@ -1,6 +1,6 @@
 from st_on_hover_tabs import on_hover_tabs
 import streamlit as st
-
+st.set_option("deprecation.showfileUploaderEncoding", False)
 st.set_page_config(layout="wide")
 st.header("Automotive Customer Review Analysis")
 # st.write("Turn every review into a pit stop for improvement with our Automotive Review Analysis App – where user feedback fuels your success.")
