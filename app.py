@@ -2,8 +2,8 @@ from st_on_hover_tabs import on_hover_tabs
 import streamlit as st
 
 st.set_page_config(layout="wide")
-
-st.header("*Automotive Customer Review Analysis*")
+st.write(f'<h1 style="color:#EC2A39;font-size:22px;">{"*Automotive Customer Review Analysis*"}</h1>', unsafe_allow_html=True)
+# st.header("*Automotive Customer Review Analysis*")
 # st.write("Turn every review into a pit stop for improvement with our Automotive Review Analysis App – where user feedback fuels your success.")
 st.write(f'<h1 style="color:#EC2A39;font-size:15px;">{"Turn every review into a pit stop for improvement with our Automotive Review Analysis App – where user feedback fuels your success."}</h1>', unsafe_allow_html=True)
 st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
