@@ -7,13 +7,13 @@ st.write(f'<h1 style="margin-top:-90px;color:#094780;font-size:35px;">{"Automoti
 st.write(f'<h1 style="margin-top:-55px;color:#EC2A39;font-size:15px;">{"Turn every review into a pit stop for improvement with our Automotive Review Analysis App – where user feedback fuels your success."}</h1>', unsafe_allow_html=True)
 # st.markdown("""<hr style="height:1px;border:none;color:#9FACB8;background-color:#9FACB8;" /> """, unsafe_allow_html=True)
 # sac.divider(label='', align='center')
-st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
+st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
 sac.chip(
     items=[
         sac.ChipItem(label='Suzuki', icon='bike'),
         sac.ChipItem(label='Honda', icon='bike'),
         sac.ChipItem(label='TVS', icon='bike'),
-    ], label='Brands', index=[0, 2], format_func='title', align='left', return_index=True
+    ], index=[0, 2], format_func='title', align='left', return_index=True
 )
 st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
 # sac.divider(label='🏠', align='center')
