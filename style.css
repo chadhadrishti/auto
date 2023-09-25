@@ -1,5 +1,5 @@
 section[data-testid='stSidebar'] {
-    background-color: #9FACB8;
+    background-color: #000;
     flex-shrink: unset !important;
     
 }
@@ -7,19 +7,19 @@ section[data-testid='stSidebar'] {
 @media(hover:hover) and (min-width: 600px) and (max-width: 769px){
 
     header[data-testid="stHeader"] {
-        display:"two";
+        display:none;
     }
 
     section[data-testid='stSidebar'] {
         height: 100%;
-        min-width:5px !important;
+        min-width:95px !important;
         width: 95px !important;
         margin-left: 305px;
         position: relative;
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: #9FACB8;
+        background-color: #111;
         overflow-x: hidden;
         transition: 0.5s ease;
         padding-top: 60px;
@@ -48,7 +48,7 @@ section[data-testid='stSidebar'] {
 
     section[data-testid='stSidebar'] {
         height: 100%;
-        min-width:5px !important;
+        min-width:95px !important;
         width: 95px !important;
         transform:translateX(0px);
         position: relative;
