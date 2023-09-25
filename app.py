@@ -32,7 +32,7 @@ with st.sidebar:
 if tabs =='Home':
         sac.divider(label='🏠', align='center')
         st.write(f'<h1 style="margin-top:-40px;text-align: center;color:#094780;font-size:15px;">{"Key Take Aways : Topics being discussed | Likes in the SKUs | Dislikes in the SKUs | Customer Sentiment | Competitive Analysis | Major Keywords | Subtopics across different automotive Key Factors"}</h1>', unsafe_allow_html=True)
-        st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways"}</h1>', unsafe_allow_html=True)
+        st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
         st.image('Picture1.png', use_column_width=True)
         col11, col22, col33 = st.columns(3)
         
@@ -40,7 +40,9 @@ if tabs =='Home':
 
 elif tabs == 'EDA':
         sac.divider(label='📊', align='center')
-        st.title("EDA")
+        st.title("Exploratory Data Analysis (EDA)")
+        st.write(f'<h1 style="margin-top:-20px;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
+        tab1, tab2, tab3, tab4, tab5 = st.tabs( ["Suzuki", "Honda", "TVS"])
         st.write('Add wcloud and some charts'.format(tabs))
     
 
