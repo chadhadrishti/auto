@@ -40,7 +40,7 @@ elif tabs == 'Topic Analysis':
 
 elif tabs == 'Subtopics':
         st.title("Subtopics")
-        st.write('20 sub topics'.format(tabs)) 'Likes','Dislikes','Sentiment','Competition'
+        st.write('20 sub topics'.format(tabs)) 
 
 elif tabs == 'Likes':
         st.title("Likes")
