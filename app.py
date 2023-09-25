@@ -13,7 +13,7 @@ with st.sidebar:
     tabs = on_hover_tabs(tabName=['Home', 'EDA','Topic Analysis','Subtopics', 'Likes','Dislikes','Sentiment','Competition'], 
                          iconName=['🏠', '📊','💡', '📝','👍','👎','💭','🏆'], 
                          styles = {'navtab': {'background-color':'#083d6e',
-                                                  'color': '#EC2A39',
+                                                  'color': '#adb0b3',
                                                   'font-size': '17px',
                                                   'transition': '.3s',
                                                   'white-space': 'nowrap',
