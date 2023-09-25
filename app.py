@@ -50,7 +50,7 @@ elif tabs == 'Dislikes':
         st.title("Dislikes")
         st.write('Dislikes/topic'.format(tabs))
 
-elif tabs == 'Customer Sentiment':
+elif tabs == 'Sentiment':
         st.title("Customer Sentiment")
         st.write('Customer Sentiment'.format(tabs))
 
