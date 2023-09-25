@@ -27,14 +27,34 @@ with st.sidebar:
 
 
 if tabs =='Home':
-        st.title("Home")
-        st.write('Name of option is'.format(tabs))
+        st.title("brands")
+        st.write('Suzuki/Honda/TVS'.format(tabs))
 
 elif tabs == 'EDA':
-        st.title("Paper")
-        st.write('Name of option is'.format(tabs))
+        st.title("EDA")
+        st.write('Add wcloud and some charts'.format(tabs))
 
 elif tabs == 'Topic Analysis':
-        st.title("Tom")
-        st.write('Name of option is'.format(tabs))
+        st.title("Topics")
+        st.write('7 key topics'.format(tabs))
+
+elif tabs == 'Subtopics':
+        st.title("Subtopics")
+        st.write('20 sub topics'.format(tabs)) 'Likes','Dislikes','Sentiment','Competition'
+
+elif tabs == 'Likes':
+        st.title("Likes")
+        st.write('Likes/topic'.format(tabs))
+
+elif tabs == 'Dislikes':
+        st.title("Dislikes")
+        st.write('Dislikes/topic'.format(tabs))
+
+elif tabs == 'Customer Sentiment':
+        st.title("Customer Sentiment")
+        st.write('Customer Sentiment'.format(tabs))
+
+elif tabs == 'Competition':
+        st.title("Competition")
+        st.write('Competition - Suzuki/Honda/TVS'.format(tabs))
     
