@@ -19,7 +19,7 @@ section[data-testid='stSidebar'] {
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: #9FACB8;
+        background-color: #083d6e;
         overflow-x: hidden;
         transition: 0.5s ease;
         padding-top: 60px;
@@ -55,7 +55,7 @@ section[data-testid='stSidebar'] {
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: #9FACB8;
+        background-color: #083d6e;
         overflow-x: hidden;
         transition: 0.5s ease;
         padding-top: 60px;
