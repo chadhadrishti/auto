@@ -12,7 +12,7 @@ section[data-testid='stSidebar'] {
 
     section[data-testid='stSidebar'] {
         height: 100%;
-        min-width:95px !important;
+        min-width:5px !important;
         width: 95px !important;
         margin-left: 305px;
         position: relative;
