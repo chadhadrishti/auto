@@ -9,7 +9,7 @@ st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_ht
 
 with st.sidebar:
     tabs = on_hover_tabs(tabName=['Home', 'EDA','Topic Analysis','Subtopics', 'Likes','Dislikes','Sentiment','Competition'], 
-                         iconName=['🏠', '📊','💡', '📝','👍,'👎','💭','🏆'], default_choice =1)
+                         iconName=['🏠', '📊','💡', '📝','👍','👎','💭','🏆'], default_choice =1)
 
 # if tabs =='Dashboard':
 #     st.title("Navigation Bar")
