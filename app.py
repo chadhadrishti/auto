@@ -25,15 +25,15 @@ with st.sidebar:
                                                      'padding-left': '30px'}},
                          key="1")
 
-# if tabs =='Home':
-#     st.title("Home")
-#     st.write('Name of option is {}'.format(tabs))
+if tabs =='Home':
+    st.title("Home")
+    st.write('Name of option is {}'.format(tabs))
 
-# elif tabs == 'Money':
-#     st.title("Paper")
-#     st.write('Name of option is {}'.format(tabs))
+elif tabs == 'EDA':
+    st.title("Paper")
+    st.write('Name of option is {}'.format(tabs))
 
-# elif tabs == 'Economy':
-#     st.title("Tom")
-#     st.write('Name of option is {}'.format(tabs))
+elif tabs == 'Topic Analysis':
+    st.title("Tom")
+    st.write('Name of option is {}'.format(tabs))
     
