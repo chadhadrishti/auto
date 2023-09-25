@@ -24,16 +24,17 @@ with st.sidebar:
                                                      'margin-bottom': '30px',
                                                      'padding-left': '30px'}},
                          key="1")
+    tabs
 
     if tabs =='Home':
         st.title("Home")
-        st.write('Name of option is {}'.format(tabs))
+        st.write('Name of option is'.format(tabs))
 
     elif tabs == 'EDA':
         st.title("Paper")
-        st.write('Name of option is {}'.format(tabs))
+        st.write('Name of option is'.format(tabs))
 
     elif tabs == 'Topic Analysis':
         st.title("Tom")
-        st.write('Name of option is {}'.format(tabs))
+        st.write('Name of option is'.format(tabs))
     
