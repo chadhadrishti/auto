@@ -32,7 +32,7 @@ with st.sidebar:
 if tabs =='Home':
         sac.divider(label='🏠', align='center')
         st.write(f'<h1 style="margin-top:-40px;text-align: center;color:#094780;font-size:15px;">{"Key Take Aways : Topics being discussed | Likes in the SKUs | Dislikes in the SKUs | Customer Sentiment | Competitive Analysis | Major Keywords | Subtopics across different automotive Key Factors"}</h1>', unsafe_allow_html=True)
-        st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:15px;">{"Select the Brand for which you would like to see the Report :"}</h1>', unsafe_allow_html=True)
+        st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways"}</h1>', unsafe_allow_html=True)
         st.image('Picture1.png', use_column_width=True)
         col11, col22, col33 = st.columns(3)
         
