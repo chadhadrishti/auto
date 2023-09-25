@@ -30,6 +30,7 @@ with st.sidebar:
 
 
 if tabs =='Home':
+        st.write(f'<h1 style="color:#094780;font-size:15px;">{"**Key Take Aways** : Topics being discussed | Likes in the SKUs | Dislikes in the SKUs | Customer Sentiment | Competitive Analysis | Major Keywords | Subtopics across different automotive Key Factors"}</h1>', unsafe_allow_html=True)
         st.write(f'<h1 style="text-align: center;color:#9FACB8;font-size:15px;">{"Select the Brand for which you would like to see the Report :"}</h1>', unsafe_allow_html=True)
         st.image('Picture1.png', use_column_width=True)
     # st.write('Suzuki/Honda/TVS'.format(tabs))
