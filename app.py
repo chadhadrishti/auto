@@ -40,7 +40,7 @@ if tabs =='Home':
 
 elif tabs == 'EDA':
         sac.divider(label='📊', align='center')
-        st.title("Exploratory Data Analysis (EDA)")
+        st.subheader(f'<h1 style="margin-top:-20px;color:#EC2A39;font-size:15px;">{"Exploratory Data Analysis (EDA)"}</h1>', unsafe_allow_html=True)
         st.write(f'<h1 style="margin-top:-20px;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
         tab1, tab2, tab3 = st.tabs( ["Suzuki", "Honda", "TVS"])
         st.write('Add wcloud and some charts'.format(tabs))
