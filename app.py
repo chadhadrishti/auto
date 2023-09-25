@@ -3,7 +3,7 @@ import streamlit as st
 
 st.set_page_config(layout="wide")
 
-st.header("Custom tab component for on-hover navigation bar")
+st.header("Automotive Customer Review Analysis")
 st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
 
 with st.sidebar:
