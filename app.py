@@ -15,8 +15,6 @@ sac.chip(
         sac.ChipItem(label='TVS', icon='bike'),
     ], index=[0, 2], format_func='title', align='left', return_index=True
 )
-st.write(f'<h1 style="margin-top:-100px;color:#094780;font-size:35px;">{""}</h1>', unsafe_allow_html=True)
-
 st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
 # sac.divider(label='🏠', align='center')
 
@@ -41,6 +39,7 @@ with st.sidebar:
 
 
 if tabs =='Home':
+        st.write(f'<h1 style="margin-top:-100px;color:#094780;font-size:35px;">{""}</h1>', unsafe_allow_html=True)
         sac.divider(label='🏠', align='center')
         st.write(f'<h1 style="margin-top:-40px;text-align: center;color:#094780;font-size:15px;">{"Key Take Aways : Topics being discussed | Likes in the SKUs | Dislikes in the SKUs | Customer Sentiment | Competitive Analysis | Major Keywords | Subtopics across different automotive Key Factors"}</h1>', unsafe_allow_html=True)
         # st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
