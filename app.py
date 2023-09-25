@@ -11,7 +11,7 @@ st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:
 sac.chip(
     items=[
         sac.ChipItem(label='Suzuki', icon='motorcycle'),
-        sac.ChipItem(label='🏍 Honda', icon='racing'),
+        sac.ChipItem(label='Honda', icon='racing'),
         sac.ChipItem(label='TVS', icon='bike'),
     ], index=[0, 2], format_func='title', align='left', return_index=True
 )
