@@ -93,10 +93,10 @@ product = sac.chip(
 )
 product = if product ==0 : 
              product = 'Suzuki'
-         elif product ==1 : 
-             product = 'Honda'
-         elif product ==2 : 
-             product = 'TVS'
+          elif product ==1 : 
+               product = 'Honda'
+          elif product ==2 : 
+               product = 'TVS'
 st.write(product)
 #read data
 df = pd.read_csv('All_Reviews.csv')
