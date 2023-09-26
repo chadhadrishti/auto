@@ -1,3 +1,4 @@
+import pandas as pd
 from st_on_hover_tabs import on_hover_tabs
 import streamlit as st
 import streamlit_antd_components as sac
