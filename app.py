@@ -87,10 +87,10 @@ st.write(f'<h1 style="margin-top:-55px;color:#EC2A39;font-size:15px;">{"Turn eve
 # sac.divider(label='', align='center')
 st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
 products = ['Suzuki','Honda','TVS']
-product = st.selectbox("", products)
-# product = sac.chip(
-#     items= products, index=[0, 2], format_func='title', align='left', return_index=True
-# )
+# product = st.selectbox("", products)
+product = sac.chip(
+    items= products, index=[0, 2], format_func='title', align='left', return_index=True, multiple=False
+)
 #read data
 df = pd.read_csv('All_Reviews.csv')
 df.columns = ['Review', 'Brand']
