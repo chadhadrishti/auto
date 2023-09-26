@@ -19,8 +19,8 @@ st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_ht
 # sac.divider(label='🏠', align='center')
 
 with st.sidebar:
-    tabs = on_hover_tabs(tabName=['Home', 'EDA','Topic Analysis','Subtopics', 'Likes','Dislikes','Sentiment','Competition'], 
-                         iconName=['🏠', '📊','💡', '📝','👍','👎','💭','🏆'], 
+    tabs = on_hover_tabs(tabName=['Home', 'EDA','Topic Analyzer' 'Likes & Dislikes','Sentiment','Competitive Analysis'], 
+                         iconName=['🏠', '📊','💡','👍','💭','🏆'], 
                          styles = {'navtab': {'background-color':'#083d6e',
                                                   'color': '#adb0b3',
                                                   'font-size': '17px',
