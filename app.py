@@ -1,3 +1,51 @@
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+import streamlit as st
+import pandas as pd
+import numpy as np
+import plotly.express as px
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+from collections import Counter
+import nltk
+from langchain.vectorstores import Chroma
+from langchain.prompts import PromptTemplate
+from langchain.chains import RetrievalQA
+from langchain.agents import load_tools, Tool
+from langchain.agents import ZeroShotAgent, AgentExecutor
+from langchain import OpenAI, LLMChain
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+import string
+from streamlit import components
+from pyecharts import options as opts
+from pyecharts.charts import Pie
+from pyecharts import options as opts
+from pyecharts.charts import Polar
+from pyecharts.globals import ThemeType
+import plotly.graph_objects as go
+from PIL import Image
+
+from streamlit import config
+import re
+import os
+
+from streamlit_chat import message
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.chat_models import ChatOpenAI
+from langchain.chains import ConversationalRetrievalChain
+from langchain.document_loaders.csv_loader import CSVLoader
+from langchain.document_loaders import UnstructuredExcelLoader
+from langchain.vectorstores import FAISS
+import tempfile
+
+st.set_option("deprecation.showfileUploaderEncoding", False)
 import pandas as pd
 from st_on_hover_tabs import on_hover_tabs
 import streamlit as st
