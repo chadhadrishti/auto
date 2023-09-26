@@ -97,7 +97,7 @@ elif product ==1 :
      product = 'Honda'
 elif product ==2 : 
      product = 'TVS'
-st.write(product)
+# st.write(product)
 #read data
 df = pd.read_csv('All_Reviews.csv')
 df.columns = ['Review', 'Brand']
@@ -174,7 +174,7 @@ elif tabs == 'EDA':
         # tab1, tab2, tab3 = st.tabs( ["Suzuki", "Honda", "TVS"])
         st.subheader("Data Collected For Product Analysis:")
         st.subheader("Word Cloud")
-        if product == 'suzuki':
+        if product == 'Suzuki':
             st.image('suzuki_wordcloud.png', width=500)
         if product == 'Honda':
             st.image('Honda_wordcloud.png', width=500)
