@@ -19,8 +19,8 @@ st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_ht
 # sac.divider(label='🏠', align='center')
 
 with st.sidebar:
-    tabs = on_hover_tabs(tabName=['Home', 'EDA','Topic Analyzer' 'Likes & Dislikes','Sentiment','Competitive Analysis'], 
-                         iconName=['🏠', '📊','💡','👍','🏆'], 
+    tabs = on_hover_tabs(tabName=['Home', 'EDA','Topic Analyzer','Sentiment Analysis','Competitive Analysis'], 
+                         iconName=['🏠', '📊','💡','💭,'🏆'], 
                          styles = {'navtab': {'background-color':'#083d6e',
                                                   'color': '#adb0b3',
                                                   'font-size': '17px',
@@ -56,32 +56,17 @@ elif tabs == 'EDA':
         st.write('Add wcloud and some charts'.format(tabs))
     
 
-elif tabs == 'Topic Analysis':
+elif tabs == 'Topic Analyzer':
         sac.divider(label='💡', align='center')
         st.title("Topics")
         st.write('7 key topics'.format(tabs))
 
-elif tabs == 'Subtopics':
-        sac.divider(label='📝', align='center')
-        st.title("Subtopics")
-        st.write('20 sub topics'.format(tabs)) 
-
-elif tabs == 'Likes':
-        sac.divider(label='👍', align='center')
-        st.title("Likes")
-        st.write('Likes/topic'.format(tabs))
-
-elif tabs == 'Dislikes':
-        sac.divider(label='👎', align='center')
-        st.title("Dislikes")
-        st.write('Dislikes/topic'.format(tabs))
-
-elif tabs == 'Sentiment':
+elif tabs == 'Sentiment Analysis':
         sac.divider(label='💭', align='center')
         st.title("Customer Sentiment")
         st.write('Customer Sentiment'.format(tabs))
 
-elif tabs == 'Competition':
+elif tabs == 'Competitive Analysis':
         sac.divider(label='🏆', align='center')
         st.title("Competition")
         st.write('Competition - Suzuki/Honda/TVS'.format(tabs))
