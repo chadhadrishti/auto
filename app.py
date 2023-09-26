@@ -19,8 +19,8 @@ st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_ht
 # sac.divider(label='🏠', align='center')
 
 with st.sidebar:
-    tabs = on_hover_tabs(tabName=['Home', 'EDA','Topic Analyzer','Sentiment Analysis','Competitive Analysis'], 
-                         iconName=['🏠', '📊','💡','💭','🏆'], 
+    tabs = on_hover_tabs(tabName=['Home','Approach', 'EDA','Topic Analyzer','Sentiment Analysis','Competitive Analysis'], 
+                         iconName=['🏠','🚀', '📊','💡','💭','🏆'], 
                          styles = {'navtab': {'background-color':'#083d6e',
                                                   'color': '#adb0b3',
                                                   'font-size': '17px',
@@ -44,8 +44,29 @@ if tabs =='Home':
         st.write(f'<h1 style="margin-top:-40px;text-align: center;color:#094780;font-size:15px;">{"Key Take Aways : Topics being discussed | Likes in the SKUs | Dislikes in the SKUs | Customer Sentiment | Competitive Analysis | Major Keywords | Subtopics across different automotive Key Factors"}</h1>', unsafe_allow_html=True)
         # st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
         st.image('Picture1.png', use_column_width=True)
-        col11, col22, col33 = st.columns(3)
-        
+        # col11, col22, col33 = st.columns(3)
+
+elif tabs =='Approach':
+        st.write(f'<h1 style="margin-top:-300px;color:#094780;font-size:35px;">{""}</h1>', unsafe_allow_html=True)
+        sac.divider(label='🚀', align='center')
+        st.write(f'<h1 style="margin-top:-40px;text-align: center;color:#094780;font-size:15px;">{"Key Take Aways : Topics being discussed | Likes in the SKUs | Dislikes in the SKUs | Customer Sentiment | Competitive Analysis | Major Keywords | Subtopics across different automotive Key Factors"}</h1>', unsafe_allow_html=True)
+        # st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
+        st.image('Approach2.png', use_column_width=True)
+        st.header('Machine Learning Techniques Used:')
+        st.subheader("Topic Modeling")
+        st.info(
+        """
+        Topic modeling is a machine learning technique used to analyze and categorize large volumes of text data. It identifies recurring patterns or themes, known as 'topics,' within the text.
+
+        For example, if a business receives numerous customer reviews, the topic modeling algorithm would identify words that commonly co-occur and form topics based on these patterns. This could reveal topics like product quality, customer service, or pricing.
+        """
+        )
+        st.subheader("NLP - Natural Language Processing")
+        st.info(
+        """
+        Natural Language Processing (NLP) is a subfield of artificial intelligence (AI) that focuses on the interaction between computers and human language. Its primary goal is to enable computers to understand, interpret, and generate human language in a valuable way. NLP combines techniques from computer science, linguistics, and machine learning to process and analyze text and speech data.
+        """
+        )
     # st.write('Suzuki/Honda/TVS'.format(tabs))
 
 elif tabs == 'EDA':
