@@ -91,6 +91,7 @@ products = ['Suzuki','Honda','TVS']
 product = sac.chip(
     items= products, index=[0, 2], format_func='title', align='left', return_index=True, multiple=False
 )
+st.write(product)
 #read data
 df = pd.read_csv('All_Reviews.csv')
 df.columns = ['Review', 'Brand']
@@ -167,7 +168,7 @@ elif tabs == 'EDA':
         # tab1, tab2, tab3 = st.tabs( ["Suzuki", "Honda", "TVS"])
         st.subheader("Data Collected For Product Analysis:")
         st.subheader("Word Cloud")
-        if product == 'Suzuki':
+        if product == 'suzuki':
             st.image('suzuki_wordcloud.png', width=500)
         if product == 'Honda':
             st.image('Honda_wordcloud.png', width=500)
