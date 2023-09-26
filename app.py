@@ -91,6 +91,14 @@ product = st.selectbox("", products)
 # product = sac.chip(
 #     items= products, index=[0, 2], format_func='title', align='left', return_index=True
 # )
+#read data
+df = pd.read_csv('All_Reviews.csv')
+df.columns = ['Review', 'Brand']
+
+df['Clean_Comment'] = df['Review'].apply(clean_text)
+topics = pd.read_csv('topic_count1.csv')
+topics["count"] = topics["count"]
+topics["Topics"] = topics["Subtopic"]
 # Filter data based on selected product
 filtered_df = df[df['Brand'] == product]
 filtered_raw_df = df[df['Brand'] == product].head(1000)
@@ -100,14 +108,6 @@ text = ' '.join(df[df['Brand'] == product]['Clean_Comment'])
 
 st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
 # sac.divider(label='🏠', align='center')
-#read data
-df = pd.read_csv('All_Reviews.csv')
-df.columns = ['Review', 'Brand']
-
-df['Clean_Comment'] = df['Review'].apply(clean_text)
-topics = pd.read_csv('topic_count1.csv')
-topics["count"] = topics["count"]
-topics["Topics"] = topics["Subtopic"]
 
 with st.sidebar:
     tabs = on_hover_tabs(tabName=['Home','Approach', 'EDA','Topic Analyzer','Sentiment Analysis','Competitive Analysis'], 
