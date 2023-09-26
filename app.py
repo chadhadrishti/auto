@@ -17,6 +17,14 @@ sac.chip(
 )
 st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
 # sac.divider(label='🏠', align='center')
+#read data
+df = pd.read_csv('All_Reviews.csv')
+df.columns = ['Review', 'Brand']
+
+df['Clean_Comment'] = df['Review'].apply(clean_text)
+topics = pd.read_csv('topic_count1.csv')
+topics["count"] = topics["count"]
+topics["Topics"] = topics["Subtopic"]
 
 with st.sidebar:
     tabs = on_hover_tabs(tabName=['Home','Approach', 'EDA','Topic Analyzer','Sentiment Analysis','Competitive Analysis'], 
@@ -74,7 +82,15 @@ elif tabs == 'EDA':
         st.write(f'<h1 style="margin-top:-20px;color:#094780;font-size:30px;">{"Exploratory Data Analysis (EDA)"}</h1>', unsafe_allow_html=True)
         # st.write(f'<h1 style="margin-top:-20px;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
         # tab1, tab2, tab3 = st.tabs( ["Suzuki", "Honda", "TVS"])
-        st.write('Add wcloud and some charts'.format(tabs))
+        st.subheader("Data Collected For Product Analysis:")
+        st.subheader("Word Cloud")
+        if product == 'Suzuki':
+            st.image('suzuki_wordcloud.png', width=500)
+        if product == 'Honda':
+            st.image('Honda_wordcloud.png', width=500)
+        if product == 'TVS':
+            st.image('tvs_wordcloud.png', width=500)
+        # st.write('Add wcloud and some charts'.format(tabs))
     
 
 elif tabs == 'Topic Analyzer':
