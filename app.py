@@ -20,7 +20,7 @@ st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_ht
 
 with st.sidebar:
     tabs = on_hover_tabs(tabName=['Home', 'EDA','Topic Analyzer' 'Likes & Dislikes','Sentiment','Competitive Analysis'], 
-                         iconName=['🏠', '📊','💡','👍','💭','🏆'], 
+                         iconName=['🏠', '📊','💡','👍','🏆'], 
                          styles = {'navtab': {'background-color':'#083d6e',
                                                   'color': '#adb0b3',
                                                   'font-size': '17px',
