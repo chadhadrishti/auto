@@ -86,13 +86,21 @@ st.write(f'<h1 style="margin-top:-55px;color:#EC2A39;font-size:15px;">{"Turn eve
 # st.markdown("""<hr style="height:1px;border:none;color:#9FACB8;background-color:#9FACB8;" /> """, unsafe_allow_html=True)
 # sac.divider(label='', align='center')
 st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
-sac.chip(
+products = ['Suzuki','Honda','TVS']
+product = sac.chip(
     items=[
         sac.ChipItem(label='Suzuki', icon='bike'),
         sac.ChipItem(label='Honda', icon='racing'),
         sac.ChipItem(label='TVS', icon='bike'),
     ], index=[0, 2], format_func='title', align='left', return_index=True
 )
+# Filter data based on selected product
+filtered_df = df[df['Brand'] == product]
+filtered_raw_df = df[df['Brand'] == product].head(1000)
+
+# Get all comments for selected product
+text = ' '.join(df[df['Brand'] == product]['Clean_Comment'])
+
 st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
 # sac.divider(label='🏠', align='center')
 #read data
@@ -169,6 +177,10 @@ elif tabs == 'EDA':
         if items == 'TVS':
             st.image('tvs_wordcloud.png', width=500)
         # st.write('Add wcloud and some charts'.format(tabs))
+        # Display raw data
+        st.subheader("Raw Data")
+        
+        st.dataframe(filtered_raw_df.head(100))
     
 
 elif tabs == 'Topic Analyzer':
