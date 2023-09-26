@@ -3,6 +3,35 @@ from st_on_hover_tabs import on_hover_tabs
 import streamlit as st
 import streamlit_antd_components as sac
 st.set_page_config(layout="wide")
+
+# Function to clean the text
+def clean_text(text):
+    # Check if the input is a string
+    if not isinstance(text, str):
+        return ""
+
+    # Convert to lowercase
+    text = text.lower()
+
+    # Remove punctuation
+    text = text.translate(str.maketrans('', '', string.punctuation))
+
+    # Tokenize text
+    tokens = word_tokenize(text)
+
+    # Remove stopwords
+    stop_words = set(stopwords.words('english'))
+    tokens = [token for token in tokens if token not in stop_words]
+
+    # Perform lemmatization
+    lemmatizer = WordNetLemmatizer()
+    tokens = [lemmatizer.lemmatize(token) for token in tokens]
+
+    # Join the tokens back into a single string
+    text = ' '.join(tokens)
+
+    return text
+    
 st.write(f'<h1 style="margin-top:-90px;color:#094780;font-size:35px;">{"VroomViews🏍️"}</h1>', unsafe_allow_html=True)
 # st.write("Turn every review into a pit stop for improvement with our Automotive Review Analysis App – where user feedback fuels your success.")
 st.write(f'<h1 style="margin-top:-55px;color:#EC2A39;font-size:15px;">{"Turn every review into a pit stop for improvement with our Automotive Review Analysis App – where user feedback fuels your success."}</h1>', unsafe_allow_html=True)
