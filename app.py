@@ -167,11 +167,11 @@ elif tabs == 'EDA':
         # tab1, tab2, tab3 = st.tabs( ["Suzuki", "Honda", "TVS"])
         st.subheader("Data Collected For Product Analysis:")
         st.subheader("Word Cloud")
-        if items == 'Suzuki':
+        if product == 'Suzuki':
             st.image('suzuki_wordcloud.png', width=500)
-        if items == 'Honda':
+        if product == 'Honda':
             st.image('Honda_wordcloud.png', width=500)
-        if items == 'TVS':
+        if product == 'TVS':
             st.image('tvs_wordcloud.png', width=500)
         # st.write('Add wcloud and some charts'.format(tabs))
         # Display raw data
