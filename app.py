@@ -33,9 +33,9 @@ with st.sidebar:
                                                     'left':'6.5px',
                                                     'text-align': 'left'},
                                    'tabStyle' : {'list-style-type': 'none',
-                                                     'margin-bottom': '30px',
+                                                     'margin-bottom': '50px',
                                                      'padding-left': '30px'}},
-                         default_choice=1)
+                         default_choice=0)
 
 
 if tabs =='Home':
