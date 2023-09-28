@@ -221,7 +221,7 @@ elif tabs == 'Topic Analyzer':
             col2.bar_chart(product_a, x= "Subtopic",y="Count")
             
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"7 key Topic Considered"}</h1>', unsafe_allow_html=True)
-        st.write(f'<h1 style="margin-top:-15px;color:#EC2A39;font-size:15px;">{"Above Subtopics were further divided into 7 Key factor Topics as follows:"}</h1>', unsafe_allow_html=True)
+        st.write(f'<h1 style="margin-top:-15px;color:#094780;font-size:15px;">{"Above Subtopics were further divided into 7 Key factor Topics as follows:"}</h1>', unsafe_allow_html=True)
 
         col1 , col2 , col3 , col4 , col5 , col6 , col7= st.columns(7)
         col1.info('👀 Body / Design / Looks/ Style')
@@ -252,11 +252,53 @@ elif tabs == 'Topic Analyzer':
             # st.write("Marketing Mix Tree")
             # Display the HTML content in the Streamlit app within the container
                 components.v1.html(html_content, height=800, scrolling=True)
+                
+        if product == 'Honda':
+            st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Number of Topics per Key Factors for Suzuki"}</h1>', unsafe_allow_html=True)
+            with open("honda_piechart.html", "r") as f:
+                html_content1 = f.read()
+        # components.v1.html(html_content, width=1200, height=3000, scrolling=True)
+
+            with st.container():
+            # st.write("Marketing Mix Tree")
+            # Display the HTML content in the Streamlit app within the container
+                components.v1.html(html_content1, height=500, scrolling=False)
+
+            st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Automotive Key Factors Tree for Suzuki"}</h1>', unsafe_allow_html=True)
+            with open("tree_honda.html", "r") as f:
+                html_content = f.read()
+        # components.v1.html(html_content, width=1200, height=3000, scrolling=True)
+
+            with st.container():
+            # st.write("Marketing Mix Tree")
+            # Display the HTML content in the Streamlit app within the container
+                components.v1.html(html_content, height=800, scrolling=True)
+        if product == 'Tvs':
+            st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Number of Topics per Key Factors for Suzuki"}</h1>', unsafe_allow_html=True)
+            with open("tvs_piechart.html", "r") as f:
+                html_content1 = f.read()
+        # components.v1.html(html_content, width=1200, height=3000, scrolling=True)
+
+            with st.container():
+            # st.write("Marketing Mix Tree")
+            # Display the HTML content in the Streamlit app within the container
+                components.v1.html(html_content1, height=500, scrolling=False)
+
+            st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Automotive Key Factors Tree for Suzuki"}</h1>', unsafe_allow_html=True)
+            with open("tree_tvs.html", "r") as f:
+                html_content = f.read()
+        # components.v1.html(html_content, width=1200, height=3000, scrolling=True)
+
+            with st.container():
+            # st.write("Marketing Mix Tree")
+            # Display the HTML content in the Streamlit app within the container
+                components.v1.html(html_content, height=800, scrolling=True)
 
 elif tabs == 'Sentiment Analysis':
         sac.divider(label='💭', align='center')
-        st.title("Customer Sentiment")
-        st.write('Customer Sentiment'.format(tabs))
+        st.write(f'<h1 style="margin-top:-20px;color:#094780;font-size:30px;">{"Customer Sentiment"}</h1>', unsafe_allow_html=True)
+        # st.title("Customer Sentiment")
+        # st.write('Customer Sentiment'.format(tabs))
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Topic Insights For Brand: Likes & Dislikes"}</h1>', unsafe_allow_html=True)
         # if product == 'Suzuki':
         col1, col2 = st.columns(2)
@@ -278,7 +320,77 @@ elif tabs == 'Sentiment Analysis':
                 - Mileage and Scooter Comparison, with emphasis on Honda Activa: Some customers are disappointed by lower-than-expected mileage and unfavorable comparisons with Honda Activa.
                 - Issues and Experiences with Scooter Service and Performance: Negative experiences are reported, including frequent service visits and unresolved problems.
                 - Features and Buying Considerations: Some buyers express disappointment with limited feature choices and uninformed purchases.''')
-        if product == 'Honda':
+                
+                st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Key Factors Insights"}</h1>', unsafe_allow_html=True)
+                pb1, pb2, pb3, pb4,pb5,pb6,pb7 = st.tabs(["Body / Design / Looks/ Style","Engine / Performance / Speed","Service & Maintenance","Special Feature, New feature","Competittion","Ride experience / Comfortability","Price, Cost, Buying"])
+
+                with pb1:
+            # st.title("Body")
+                    st.write("""
+                    - Keywords: grip, shock, sound, appeal, quality, body, space, small, helmet, look, light, head, chrome, colour.
+                    - Insights:
+                        1. Customers are concerned about the grip of the scooter's tires and the shock absorption.
+                        2. Aesthetic factors such as appeal, quality, and looks play a significant role in the scooter's choice.
+                        3. Space and design, including small details like helmet hooks and lighting, are important to buyers.
+                    """)
+
+                with pb2:
+            # st.title("Engine")
+                    st.write("""
+                   - Keywords: speed, engine, performance, power, cc, tank, consumption, mileage, pickup, speedometer, weight, handle.
+                   - Insights:
+                       1. Performance-related factors like speed, engine power, and fuel efficiency are essential considerations.
+                       2. Mileage, pickup, and handling are significant aspects of the scooter's performance.
+                       3. Engine specifications such as cc, tank capacity, and fuel consumption are mentioned.
+                    """)
+
+                with pb3:
+            # st.title("service")
+                    st.write("""
+                    - Keywords: service, part, center, oil, servicing, spare, problem, issue, battery, problem, kms, face, review, company.
+                    - Insights:
+                            1. Customers are concerned about the scooter's maintenance and service requirements.
+                            2. Availability of spare parts, servicing centers, and addressing issues are important considerations.
+                            3. Mileage and performance issues are discussed in the context of service and maintenance.
+                    """)
+
+                with pb4:
+            # st.title("special feature")
+                    st.write("""
+                    - Keywords: special, edition, key, cover, open, lock, digital meter, make, new, model, india.
+                    - Insights:
+                    1. Customers are interested in special editions and new features like digital meters and keyless entry.
+                    2. The availability of unique features can influence purchasing decisions.
+                    """)
+
+                with pb5:
+            # st.title("competition")
+                    st.write("""
+                    - Keywords: vehicle, dealer, purchase, compare, access, honda, suzuki, friend, activa, scooty, company, activa, inda.
+                    - Insights:
+                        1. Customers often compare different scooter models, including Honda Activa, Suzuki Access, and others.
+                        2. Recommendations from friends and the reputation of the company are mentioned in the context of competition.
+                    """)
+            
+                with pb6:
+                    # st.title("ride experience")
+                    st.write("""
+                    - Keywords: ride, comfortable, comfort, seat, long, space, drive, sit, feel, test, people, smooth.
+                    - Insights:
+                        1. Comfort during rides, including seat comfort and spaciousness, is crucial to buyers.
+                        2. Test rides and user experiences play a significant role in evaluating comfort.
+                        3. The smoothness of the ride is an important factor.
+                    """)
+
+                with pb7:
+            # st.title("price")
+                    st.write("""
+                    - Keywords: buy, purchase, price, cost.
+                    - Insights:
+                        1. Pricing and affordability are essential considerations for potential buyers.
+                        2. The cost of purchasing the scooter is a key decision-making factor.""")
+                    
+            if product == 'Honda':
                 col1.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Likes👍"}</h1>', unsafe_allow_html=True)
                 col1.info('''
                 - Comparing the Honda Activa's Engine and Riding Experience: Enthusiasts appreciate the comparison of engine performance and riding experience, seeking information to make informed choices.
@@ -295,6 +407,65 @@ elif tabs == 'Sentiment Analysis':
                 - Troubleshooting Common Motorcycle Problems: Riders encounter issues related to mileage, speed, and engine performance, which can be seen as negative experiences.
                 - Optimizing Your Honda Motorcycle Service Experience: Riders may have concerns about managing service costs and maintenance, potentially reflecting negative aspects of the ownership experience.
                 - Honda Motorcycle Gear Shift Issues: Some riders may experience gear shift problems, impacting the smoothness of their rides.''')
+                
+                st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Key Factors Insights"}</h1>', unsafe_allow_html=True)
+                pb1, pb2, pb3, pb4,pb5,pb6,pb7 = st.tabs(["Body / Design / Looks/ Style","Engine / Performance / Speed","Service & Maintenance","Special Feature, New feature","Competittion","Ride experience / Comfortability","Price, Cost, Buying"])
+
+                with pb1:
+            # st.title("Body")
+                    st.write("""
+                    - Keywords: look, feature, colour, light, awesome, smooth.
+                    - Insights: 
+                        1. Customers are discussing the scooter's look, color options, and design features. They appreciate features that enhance the scooter's style and appearance.
+                    """)
+
+                with pb2:
+            # st.title("Engine")
+                    st.write("""
+                    - Keywords: engine, power, speed, mileage, performance, shift.
+                    - Insights: 
+                        1. Customers are sharing their experiences related to the scooter's engine performance, power, speed, and fuel efficiency. Some mention gear shift performance.
+                    """)
+
+                with pb3:
+            # st.title("service")
+                    st.write("""
+                    - Keywords: service, problem, issue, maintenance, cost.
+                    - Insights: 
+                        1. Customers are discussing service-related aspects, including problems, maintenance, and associated costs. They are concerned about service quality.
+                    """)
+
+                with pb4:
+            # st.title("special feature")
+                    st.write("""
+                    - Keywords: feature, headlight.
+                    - Insights: 
+                        1. Customers are talking about special features, especially regarding headlight performance.
+                    """)
+
+                with pb5:
+            # st.title("competition")
+                    st.write("""
+                    - Keywords: activa, honda, scooty, xblade.
+                    - Insights: 
+                        1. Customers are comparing the scooter with Honda Activa, Scooty, and Xblade in terms of various aspects.
+                    """)
+            
+                with pb6:
+                    # st.title("ride experience")
+                    st.write("""
+                    - Keywords: ride, comfortable, feel, long, time.
+                    - Insights: 
+                        1. Customers are sharing their riding experiences and comfort-related feedback, including long rides.
+                    """)
+
+                with pb7:
+            # st.title("price")
+                    st.write("""
+                    - Keywords: buy, purchase, cost, value, money.
+                    - Insights: 
+                        1. Customers are discussing the price, cost, and overall value for money when considering buying a scooter.""")
+                    
         if product == 'Tvs':
                 col1.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Likes👍"}</h1>', unsafe_allow_html=True)
                 col1.info('''
@@ -312,7 +483,68 @@ elif tabs == 'Sentiment Analysis':
                 - The Art of Riding: There are concerns or dislikes related to aspects of motorcycle aesthetics or style.
                 - Elevating the Scooter Experience: Some riders may have reservations about the scooter experience, possibly due to expectations of greater innovation.
                 - Navigating the World of Motorcycle Ownership: Negative experiences are reported, including challenges with service, maintenance, and the overall rider's journey.''')
+               
+                st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Key Factors Insights"}</h1>', unsafe_allow_html=True)
+                pb1, pb2, pb3, pb4,pb5,pb6,pb7 = st.tabs(["Body / Design / Looks/ Style","Engine / Performance / Speed","Service & Maintenance","Special Feature, New feature","Competittion","Ride experience / Comfortability","Price, Cost, Buying"])
+
+                with pb1:
+            # st.title("Body")
+                    st.write("""
+                   - Keywords: Look, style, design, nice, comfortable, new
+                   - Insights: 
+                        1. Customers frequently comment on the scooter's appearance, highlighting its nice design and comfortable style. Many find it visually appealing and consider it a new and attractive option in terms of style.
+                    """)
+
+                with pb2:
+            # st.title("Engine")
+                    st.write("""
+                   - Keywords: Power, speed, engine, performance, pickup, mileage
+                   - Insights: 
+                        1. Customers focus on the scooter's performance attributes, emphasizing factors like power, speed, engine performance, and pickup. Mileage is also discussed, indicating an interest in fuel efficiency.
+                    """)
+
+                with pb3:
+            # st.title("service")
+                    st.write("""
+                    - Keywords: Service, maintenance, problem, issue
+                    - Insights: 
+                        1. Customers share their experiences with the scooter's service and maintenance. They discuss any problems or issues they've encountered, providing feedback on the scooter's reliability and after-sales service.
+                    """)
+
+                with pb4:
+            # st.title("special feature")
+                    st.write("""
+                    - Keywords: Feature, awesome, great, useful
+                    - Insights: 
+                        1. Customers appreciate unique features in the scooter and describe them as awesome and great. They value features that enhance their riding experience, emphasizing their usefulness.
+                    """)
+
+                with pb5:
+            # st.title("competition")
+                    st.write("""
+                    - Keywords: Jupiter, TVS, segment, class, braking
+                    - Insights: 
+                        1. Customers compare the scooter to competitors like Jupiter and other TVS models. They evaluate its performance and class in relation to these competitors and mention considerations like braking.
+                    """)
             
+                with pb6:
+                    # st.title("ride experience")
+                    st.write("""
+                    - Keywords: Comfortable, smooth, cost, light
+                    - Insights: 
+                           1. Customers focus on the riding experience, emphasizing comfort and smoothness. They also discuss cost-related aspects and the scooter's lightweight nature.
+                    """)
+
+                with pb7:
+            # st.title("price")
+                    st.write("""
+                    - Keywords: Price, value, money, buying, purchase
+                    - Insights: 
+                        1. Customers discuss the scooter's price, value for money, and their buying experiences. They evaluate whether the scooter is a worthwhile purchase.
+                    - Additional Insights:
+                        1. This category includes various keywords and insights that don't fit into the predefined categories. These insights cover a range of topics, including specific scooter models (e.g., "Apache," "RR"), mentions of "excellent" features, and discussions about "smooth" rides. These insights provide additional context and feedback from customers.
+                    """)
+                    
 elif tabs == 'Competitive Analysis':
         sac.divider(label='🏆', align='center')
         st.title("Competition")
