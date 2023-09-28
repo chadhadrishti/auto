@@ -211,7 +211,7 @@ elif tabs == 'Topic Analyzer':
         if product == 'Suzuki':
                 col1.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Likes👍"}</h1>', unsafe_allow_html=True)
                 col1.info('''
-                - Riding Experience and Road Conditions: Riders appreciate the smooth handling and comfortable suspension on various road surfaces.
+                - **Riding Experience and Road Conditions**: Riders appreciate the smooth handling and comfortable suspension on various road surfaces.
                 - Vehicle Buying Experience: Positive feedback is received for dealerships with straightforward purchasing processes and friendly sales staff.
                 - Vehicle Maintenance and Component Considerations: Owners like the durability of components and reasonable maintenance costs.
                 - Positive Vehicle Experience and Appreciation: Customers express loyalty to the brand and share memorable riding experiences.
