@@ -221,7 +221,7 @@ elif tabs == 'Topic Analyzer':
             col2.bar_chart(product_a, x= "Subtopic",y="Count")
             
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"7 key Topic Considered"}</h1>', unsafe_allow_html=True)
-        col1 , col2 , col3 , col4 , col5 , col6 , col7= st.columns(5)
+        col1 , col2 , col3 , col4 , col5 , col6 , col7= st.columns(7)
         col1.info('👀 Body / Design / Looks/ Style')
         col2.info('⚡ Engine / Performance / Speed')
         col3.info('🛠️ Service & Maintenance')
