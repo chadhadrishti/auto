@@ -559,7 +559,7 @@ elif tabs == 'Competitive Analysis':
     # col22.metric("Wallmart", Wallmart_count)
         col3.image('tvs_logo.png', width=200)
         coll1, coll2, coll3 = st.columns(3)
-        coll1.metric("Suzuki", **7385**)
+        coll1.metric("Suzuki", 7385)
         coll2.metric("Honda", 1846)
         coll3.metric("TVS", 1033)
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:20px;">{"Mean Polarity across Brands"}</h1>', unsafe_allow_html=True)
@@ -628,7 +628,7 @@ elif tabs == 'Competitive Analysis':
         col3.metric("TVS", 0.519)
     # col4.metric("K", scores['Polarity Scores'][3])
 
-        st.write(f'<h1 style="margin-top:-15px;color:#094780;font-size:15px;">{"Polarity across different Subtopics"}</h1>', unsafe_allow_html=True)
+        st.write(f'<h1 style="margin-top:-15px;color:#9FACB8;font-size:20px;">{"Polarity across different Subtopics"}</h1>', unsafe_allow_html=True)
         col1, col2 = st.columns(2)
         col1.metric("Overall Polarity","")
         dff = pd.read_csv('mean_polarity.csv')
