@@ -208,7 +208,7 @@ elif tabs == 'Topic Analyzer':
         # if product == 'Suzuki':
         col1, col2 = st.columns(2)
         # with st.expander("Click to see insights"):
-            if product == 'Suzuki':
+        if product == 'Suzuki':
                 col1.write((f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Likes👍"}</h1>', unsafe_allow_html=True)
                 col1.info('''
                 - Riding Experience and Road Conditions: Riders appreciate the smooth handling and comfortable suspension on various road surfaces.
