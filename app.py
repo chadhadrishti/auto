@@ -193,16 +193,16 @@ elif tabs == 'Topic Analyzer':
         st.write('7 key topics'.format(tabs))
         st.subheader("Extracted SubTopics and Topics")
         if product == 'Suzuki':
-        product_b = pd.read_csv('Suzuki_subtopic_topic.csv')
-        st.dataframe(product_b)
+            product_b = pd.read_csv('Suzuki_subtopic_topic.csv')
+            st.dataframe(product_b)
 
-        if product == 'Honda':
-        product_a = pd.read_csv('Honda_subtopic_topic.csv')
-        st.dataframe(product_a)
+        # if product == 'Honda':
+        # product_a = pd.read_csv('Honda_subtopic_topic.csv')
+        # st.dataframe(product_a)
 
-        if product == 'TVS':
-        product_a = pd.read_csv('TVS_subtopic_topic.csv')
-        st.dataframe(product_a)
+        # if product == 'TVS':
+        # product_a = pd.read_csv('TVS_subtopic_topic.csv')
+        # st.dataframe(product_a)
 
 elif tabs == 'Sentiment Analysis':
         sac.divider(label='💭', align='center')
