@@ -150,7 +150,7 @@ elif tabs =='Approach':
         # st.write(f'<h1 style="margin-top:-40px;text-align: center;color:#094780;font-size:15px;">{"Key Take Aways : Topics being discussed | Likes in the SKUs | Dislikes in the SKUs | Customer Sentiment | Competitive Analysis | Major Keywords | Subtopics across different automotive Key Factors"}</h1>', unsafe_allow_html=True)
         # st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
         st.image('Approach2.png', use_column_width=True)
-        st.write(f'<h1 style="margin-top:-40px;text-align: center;color:#094780;font-size:30px;">{'Machine Learning Techniques Used:'}</h1>', unsafe_allow_html=True)
+        st.write(f'<h1 style="margin-top:-40px;text-align: center;color:#094780;font-size:30px;">{"Machine Learning Techniques Used:"}</h1>', unsafe_allow_html=True)
         st.write(f'<h1 style="margin-top:-40px;text-align: center;color:#EC2A39;font-size:20px;">{"Topic Modeling"}</h1>', unsafe_allow_html=True)
         st.info(
         """
