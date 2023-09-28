@@ -205,7 +205,7 @@ elif tabs == 'Topic Analyzer':
             st.dataframe(product_a)
             
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Topic Insights For Brand: Likes & Dislikes"}</h1>', unsafe_allow_html=True)
-        if product == 'Suzuki':
+        # if product == 'Suzuki':
         col1, col2 = st.columns(2)
         # with st.expander("Click to see insights"):
             if product == 'Suzuki':
