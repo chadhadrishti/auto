@@ -173,7 +173,7 @@ elif tabs == 'EDA':
         # st.write(f'<h1 style="margin-top:-20px;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
         # tab1, tab2, tab3 = st.tabs( ["Suzuki", "Honda", "TVS"])
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Data Collected For Product Analysis:"}</h1>', unsafe_allow_html=True)
-        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#EC2A39;font-size:20px;">{"Word Cloud"}</h1>', unsafe_allow_html=True)
+        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:20px;">{"Word Cloud"}</h1>', unsafe_allow_html=True)
         if product == 'Suzuki':
             st.image('suzuki_wordcloud.png', use_column_width=True)
         if product == 'Honda':
@@ -182,7 +182,7 @@ elif tabs == 'EDA':
             st.image('tvs_wordcloud.png', use_column_width=True)
         # st.write('Add wcloud and some charts'.format(tabs))
         # Display raw data
-        st.subheader("Raw Data")
+        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Raw Data"}</h1>', unsafe_allow_html=True)
         
         st.dataframe(filtered_raw_df.head(100))
     
