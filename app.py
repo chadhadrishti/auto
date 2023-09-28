@@ -632,30 +632,57 @@ elif tabs == 'Competitive Analysis':
         col1, col2 = st.columns(2)
         col1.metric("Overall Polarity","")
         dff = pd.read_csv('mean_polarity.csv')
-        dff = dff[['Brand','Overall Polarity']]
-        dff['Overall Polarity']=dff['Overall Polarity'].astype('float')
-        col1.bar_chart(dff, x= ["Honda","Suzuki","TVS"],y="Overall Polarity")
+        df2 = dff[['Brand','Overall Polarity']]
+        df2['Overall Polarity']=df2['Overall Polarity'].astype('float')
+        col1.bar_chart(df2, x= "Brand",y="Overall Polarity")
 
         # col1.image('Key_Factor0.png',width=500)
         # col1.metric("Overall Polarity","")
         # col11.metric("Amazon", Amazon_count)
         col2.metric("Body/Design/Looks/Style","")
-        col2.image('Key_Factor1.png',width=500)
+        df2 = dff[['Brand','Body/Design/Looks/Style']]
+        df2['Body/Design/Looks/Style']=df2['Body/Design/Looks/Style'].astype('float')
+        col2.bar_chart(df2, x= "Brand",y="Body/Design/Looks/Style")
+    
+        # col2.image('Key_Factor1.png',width=500)
         coll1, coll2 = st.columns(2)
         coll1.metric("Engine/Performance/Speed","")
-        coll1.image('Key_Factor2.png',width=500)
+        df2 = dff[['Brand','Engine/Performance/Speed']]
+        df2['Engine/Performance/Speed']=df2['Engine/Performance/Speed'].astype('float')
+        coll1.bar_chart(df2, x= "Brand",y="Engine/Performance/Speed")
+    
+        # coll1.image('Key_Factor2.png',width=500)
     # col11.metric("Amazon", Amazon_count)
         coll2.metric("Service & Maintenance","")
-        coll2.image('Key_Factor3.png',width=500)
+        df2 = dff[['Brand','Service & Maintenance']]
+        df2['Service & Maintenance']=df2['Service & Maintenance'].astype('float')
+        coll2.bar_chart(df2, x= "Brand",y="Service & Maintenance")
+    
+        # coll2.image('Key_Factor3.png',width=500)
         colll1, colll2 = st.columns(2)
         colll1.metric("Special Feature, New Feature","")
-        colll1.image('Key_Factor4.png',width=500)
+        df2 = dff[['Brand','Special Feature, New Feature']]
+        df2['Special Feature, New Feature']=df2['Special Feature, New Feature'].astype('float')
+        colll1.bar_chart(df2, x= "Brand",y="Special Feature, New Feature")
+    
+        # colll1.image('Key_Factor4.png',width=500)
     # col11.metric("Amazon", Amazon_count)
         colll2.metric("Competition","")
-        colll2.image('Key_Factor5.png',width=500)
+        df2 = dff[['Brand','Competition']]
+        df2['Competition']=df2['Competition'].astype('float')
+        colll2.bar_chart(df2, x= "Brand",y="Competition")
+    
+        # colll2.image('Key_Factor5.png',width=500)
         collll1, collll2 = st.columns(2)
         collll1.metric("Ride Experience/Comfortability","")
-        collll1.image('Key_Factor6.png',width=500)
+        df2 = dff[['Brand','Ride Experience/Comfortability']]
+        df2['Ride Experience/Comfortability']=df2['Ride Experience/Comfortability'].astype('float')
+        collll1.bar_chart(df2, x= "Brand",y="Ride Experience/Comfortability")
+    
+        # collll1.image('Key_Factor6.png',width=500)
     # col11.metric("Amazon", Amazon_count)
         collll2.metric("Price, Cost, Buying","")
-        collll2.image('Key_Factor7.png',width=500)
+        df2 = dff[['Brand','Price, Cost, Buying']]
+        df2['Price, Cost, Buying']=df2['Price, Cost, Buying'].astype('float')
+        collll2.bar_chart(df2, x= "Brand",y="Price, Cost, Buying")
+        # collll2.image('Key_Factor7.png',width=500)
