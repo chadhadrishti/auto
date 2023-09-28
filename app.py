@@ -195,8 +195,8 @@ elif tabs == 'Topic Analyzer':
         if product == 'Suzuki':
             product_b = pd.read_csv('Suzuki_subtopic_topic.csv')
             product_b = product_b[['Subtopic','Count']]
-            x = np.array(product_b[['Subtopic']])
-            y = np.array(product_b[['Count']])
+            x = product_b['Subtopic']
+            y = product_b['Count']
             # using the pyplot.bar funtion
             plt.bar(x,y)
 
