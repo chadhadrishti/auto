@@ -221,15 +221,42 @@ elif tabs == 'Topic Analyzer':
             col2.bar_chart(product_a, x= "Subtopic",y="Count")
             
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"7 key Topic Considered"}</h1>', unsafe_allow_html=True)
+        st.write(f'<h1 style="margin-top:-15px;color:#EC2A39;font-size:15px;">{"Above Subtopics were further divided into 7 Key factor Topics as follows:"}</h1>', unsafe_allow_html=True)
+
         col1 , col2 , col3 , col4 , col5 , col6 , col7= st.columns(7)
         col1.info('👀 Body / Design / Looks/ Style')
         col2.info('⚡ Engine / Performance / Speed')
-        col3.info('🛠️ Service and Maintenance')
+        col3.info('🛠️ Service & Maintenance')
         col4.info('🆕 Special Feature, New feature')
-        col5.info('🥇 Competition              ')
+        col5.info('🥇 Competition')
         col6.info('🏍️ Ride experience / Comfortability')
-        col7.info('💲 Price , Cost , Buying   ')
+        col7.info('💲 Price, Cost, Buying')
     
+        if product == 'Suzuki':
+        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Number of Topics per Key Factors for Suzuki"}</h1>', unsafe_allow_html=True)
+        with open("suzuki_piechart.html", "r") as f:
+            html_content1 = f.read()
+        # components.v1.html(html_content, width=1200, height=3000, scrolling=True)
+
+        with st.container():
+            # st.write("Marketing Mix Tree")
+            # Display the HTML content in the Streamlit app within the container
+            components.v1.html(html_content1, height=500, scrolling=False)
+
+        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Automotive Key Factors Tree for Suzuki"}</h1>', unsafe_allow_html=True)
+        with open("tree.html", "r") as f:
+            html_content = f.read()
+        # components.v1.html(html_content, width=1200, height=3000, scrolling=True)
+
+        with st.container():
+            # st.write("Marketing Mix Tree")
+            # Display the HTML content in the Streamlit app within the container
+            components.v1.html(html_content, height=800, scrolling=True)
+
+elif tabs == 'Sentiment Analysis':
+        sac.divider(label='💭', align='center')
+        st.title("Customer Sentiment")
+        st.write('Customer Sentiment'.format(tabs))
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Topic Insights For Brand: Likes & Dislikes"}</h1>', unsafe_allow_html=True)
         # if product == 'Suzuki':
         col1, col2 = st.columns(2)
@@ -285,12 +312,7 @@ elif tabs == 'Topic Analyzer':
                 - The Art of Riding: There are concerns or dislikes related to aspects of motorcycle aesthetics or style.
                 - Elevating the Scooter Experience: Some riders may have reservations about the scooter experience, possibly due to expectations of greater innovation.
                 - Navigating the World of Motorcycle Ownership: Negative experiences are reported, including challenges with service, maintenance, and the overall rider's journey.''')
-
-elif tabs == 'Sentiment Analysis':
-        sac.divider(label='💭', align='center')
-        st.title("Customer Sentiment")
-        st.write('Customer Sentiment'.format(tabs))
-
+            
 elif tabs == 'Competitive Analysis':
         sac.divider(label='🏆', align='center')
         st.title("Competition")
