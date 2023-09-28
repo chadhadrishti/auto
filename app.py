@@ -198,8 +198,8 @@ elif tabs == 'Topic Analyzer':
             x = product_b['Subtopic']
             y = product_b['Count']
             # using the pyplot.bar funtion
-            st.plt.bar(x,y).show()
-            
+            plt.bar(x,y).show()
+            st.plt.show()
             st.dataframe(product_b)
 
         if product == 'Honda':
