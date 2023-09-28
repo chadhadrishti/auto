@@ -175,7 +175,7 @@ elif tabs == 'EDA':
         st.subheader("Data Collected For Product Analysis:")
         st.subheader("Word Cloud")
         if product == 'Suzuki':
-            st.image('suzuki_wordcloud.png', width=500)
+            st.image('suzuki_wordcloud.png', use_column_width=True)
         if product == 'Honda':
             st.image('Honda_wordcloud.png', width=500)
         if product == 'TVS':
