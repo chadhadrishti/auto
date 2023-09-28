@@ -150,8 +150,8 @@ elif tabs =='Approach':
         # st.write(f'<h1 style="margin-top:-40px;text-align: center;color:#094780;font-size:15px;">{"Key Take Aways : Topics being discussed | Likes in the SKUs | Dislikes in the SKUs | Customer Sentiment | Competitive Analysis | Major Keywords | Subtopics across different automotive Key Factors"}</h1>', unsafe_allow_html=True)
         # st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
         st.image('Approach2.png', use_column_width=True)
-        st.header('Machine Learning Techniques Used:')
-        st.subheader("Topic Modeling")
+        st.write(f'<h1 style="margin-top:-40px;text-align: center;color:#094780;font-size:30px;">{'Machine Learning Techniques Used:'}</h1>', unsafe_allow_html=True)
+        st.write(f'<h1 style="margin-top:-40px;text-align: center;color:#EC2A39;font-size:20px;">{"Topic Modeling"}</h1>', unsafe_allow_html=True)
         st.info(
         """
         Topic modeling is a machine learning technique used to analyze and categorize large volumes of text data. It identifies recurring patterns or themes, known as 'topics,' within the text.
@@ -159,7 +159,7 @@ elif tabs =='Approach':
         For example, if a business receives numerous customer reviews, the topic modeling algorithm would identify words that commonly co-occur and form topics based on these patterns. This could reveal topics like product quality, customer service, or pricing.
         """
         )
-        st.subheader("NLP - Natural Language Processing")
+        st.subheader(f'<h1 style="margin-top:-40px;text-align: center;color:#EC2A39;font-size:20px;">{"NLP - Natural Language Processing"}</h1>', unsafe_allow_html=True)
         st.info(
         """
         Natural Language Processing (NLP) is a subfield of artificial intelligence (AI) that focuses on the interaction between computers and human language. Its primary goal is to enable computers to understand, interpret, and generate human language in a valuable way. NLP combines techniques from computer science, linguistics, and machine learning to process and analyze text and speech data.
@@ -177,9 +177,9 @@ elif tabs == 'EDA':
         if product == 'Suzuki':
             st.image('suzuki_wordcloud.png', use_column_width=True)
         if product == 'Honda':
-            st.image('Honda_wordcloud.png', width=500)
+            st.image('Honda_wordcloud.png', use_column_width=True)
         if product == 'TVS':
-            st.image('tvs_wordcloud.png', width=500)
+            st.image('tvs_wordcloud.png', use_column_width=True)
         # st.write('Add wcloud and some charts'.format(tabs))
         # Display raw data
         st.subheader("Raw Data")
@@ -191,6 +191,18 @@ elif tabs == 'Topic Analyzer':
         sac.divider(label='💡', align='center')
         st.title("Topics")
         st.write('7 key topics'.format(tabs))
+        st.subheader("Extracted SubTopics and Topics")
+        if product == 'Suzuki':
+        product_b = pd.read_csv('Suzuki_subtopic_topic.csv')
+        st.dataframe(product_b)
+
+        if product == 'Honda':
+        product_a = pd.read_csv('Honda_subtopic_topic.csv')
+        st.dataframe(product_a)
+
+        if product == 'TVS':
+        product_a = pd.read_csv('TVS_subtopic_topic.csv')
+        st.dataframe(product_a)
 
 elif tabs == 'Sentiment Analysis':
         sac.divider(label='💭', align='center')
