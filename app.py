@@ -192,7 +192,7 @@ elif tabs == 'Topic Analyzer':
         sac.divider(label='💡', align='center')
         st.write(f'<h1 style="margin-top:-20px;color:#094780;font-size:30px;">{"Topic Analyzer"}</h1>', unsafe_allow_html=True)
         # st.title("Topics")
-        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Extracted SubTopics and Topics"}</h1>', unsafe_allow_html=True)
+        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Extracted SubTopics and Review Count"}</h1>', unsafe_allow_html=True)
         if product == 'Suzuki':
             col1 , col2 = st.columns(2)
             product_b = pd.read_csv('Suzuki_subtopic_topic.csv')
@@ -220,6 +220,16 @@ elif tabs == 'Topic Analyzer':
             col1.dataframe(product_a)
             col2.bar_chart(product_a, x= "Subtopic",y="Count")
             
+        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"7 key Topic Considered"}</h1>', unsafe_allow_html=True)
+        col1 , col2 , col3 , col4 , col5 , col6 , col7= st.columns(7)
+        col1.info('👀 Body / Design / Looks/ Style')
+        col1.info('⚡ Engine / Performance / Speed')
+        col1.info('🛠️ Service & Maintenance')
+        col1.info('🆕 Special Feature, New feature')
+        col1.info('🥇 Competition')
+        col1.info('🏍️ Ride experience / Comfortability')
+        col1.info('💲 Price, Cost, Buying')
+    
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Topic Insights For Brand: Likes & Dislikes"}</h1>', unsafe_allow_html=True)
         # if product == 'Suzuki':
         col1, col2 = st.columns(2)
