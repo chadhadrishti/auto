@@ -203,18 +203,22 @@ elif tabs == 'Topic Analyzer':
             # chart_data = pd.DataFrame(product_b, columns=["Subtopic"])
             # st.bar_chart(chart_data)
             # Vertical stacked bar chart
-            col1.bar_chart(product_b, x= "Subtopic",y="Count")
-            col2.dataframe(product_b)
+            col1.dataframe(product_b)
+            col2.bar_chart(product_b, x= "Subtopic",y="Count")
 
         if product == 'Honda':
+            col1 , col2 = st.columns(2)
             product_a = pd.read_csv('Honda_subtopic_topic.csv')
             product_a = product_a[['Subtopic','Count']]
-            st.dataframe(product_a)
+            col1.dataframe(product_a)
+            col2.bar_chart(product_a, x= "Subtopic",y="Count")
 
         if product == 'TVS':
+            col1 , col2 = st.columns(2)
             product_a = pd.read_csv('TVS_subtopic_topic.csv')
             product_a = product_a[['Subtopic','Count']]
-            st.dataframe(product_a)
+            col1.dataframe(product_a)
+            col2.bar_chart(product_a, x= "Subtopic",y="Count")
             
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Topic Insights For Brand: Likes & Dislikes"}</h1>', unsafe_allow_html=True)
         # if product == 'Suzuki':
