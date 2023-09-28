@@ -209,7 +209,7 @@ elif tabs == 'Topic Analyzer':
         col1, col2 = st.columns(2)
         # with st.expander("Click to see insights"):
         if product == 'Suzuki':
-                col1.write((f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Likes👍"}</h1>', unsafe_allow_html=True)
+                col1.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Likes👍"}</h1>', unsafe_allow_html=True)
                 col1.info('''
                 - Riding Experience and Road Conditions: Riders appreciate the smooth handling and comfortable suspension on various road surfaces.
                 - Vehicle Buying Experience: Positive feedback is received for dealerships with straightforward purchasing processes and friendly sales staff.
@@ -218,7 +218,7 @@ elif tabs == 'Topic Analyzer':
                 - Comfort and Quality of Scooter Seating, particularly for long rides: Owners enjoy comfortable seating and ergonomic design for extended journeys.''')
 
                 # Customer preferences
-                col2.write((f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Dislikes👍"}</h1>', unsafe_allow_html=True)
+                col2.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Dislikes👎"}</h1>', unsafe_allow_html=True)
                 col2.info('''
                 - Vehicle Starting Issues and Engine Problems: Some users report occasional starting problems and engine issues, which can be frustrating.
                 - Vehicle Body and Design Considerations: There are dislikes related to limited color options and outdated design in certain models.
