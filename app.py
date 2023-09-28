@@ -634,7 +634,7 @@ elif tabs == 'Competitive Analysis':
         dff = pd.read_csv('mean_polarity.csv')
         dff = dff[['Brand','Overall Polarity']]
         dff['Overall Polarity']=dff['Overall Polarity'].astype('float')
-        col1.bar_chart(dff, x= "Brand",y="Overall Polarity",color=('red', 'green', 'blue'))
+        col1.bar_chart(dff, x= "Overall Polarity",y="Brand")
 
         # col1.image('Key_Factor0.png',width=500)
         # col1.metric("Overall Polarity","")
