@@ -353,7 +353,7 @@ elif tabs == 'Sentiment Analysis':
                             2. Availability of spare parts, servicing centers, and addressing issues are important considerations.
                             3. Mileage and performance issues are discussed in the context of service and maintenance.
                     """)
-
+            
                 with pb4:
             # st.title("special feature")
                     st.write("""
@@ -390,7 +390,7 @@ elif tabs == 'Sentiment Analysis':
                         1. Pricing and affordability are essential considerations for potential buyers.
                         2. The cost of purchasing the scooter is a key decision-making factor.""")
                     
-            if product == 'Honda':
+        if product == 'Honda':
                 col1.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Likes👍"}</h1>', unsafe_allow_html=True)
                 col1.info('''
                 - Comparing the Honda Activa's Engine and Riding Experience: Enthusiasts appreciate the comparison of engine performance and riding experience, seeking information to make informed choices.
