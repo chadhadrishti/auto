@@ -194,6 +194,7 @@ elif tabs == 'Topic Analyzer':
         # st.title("Topics")
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Extracted SubTopics and Topics"}</h1>', unsafe_allow_html=True)
         if product == 'Suzuki':
+            col1,col2 = st.columns(2)
             product_b = pd.read_csv('Suzuki_subtopic_topic.csv')
             product_b = product_b[['Subtopic','Count']]
             product_b['Count']=product_b['Count'].astype('int')
@@ -202,8 +203,8 @@ elif tabs == 'Topic Analyzer':
             # chart_data = pd.DataFrame(product_b, columns=["Subtopic"])
             # st.bar_chart(chart_data)
             # Vertical stacked bar chart
-            st.bar_chart(product_b, x= "Count",y="Subtopic")
-            st.dataframe(product_b)
+            st.col1.bar_chart(product_b, x= "Subtopic",y="Count")
+            st.col2.dataframe(product_b)
 
         if product == 'Honda':
             product_a = pd.read_csv('Honda_subtopic_topic.csv')
