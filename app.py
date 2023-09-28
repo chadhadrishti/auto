@@ -254,7 +254,7 @@ elif tabs == 'Topic Analyzer':
                 components.v1.html(html_content, height=800, scrolling=True)
                 
         if product == 'Honda':
-            st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Number of Topics per Key Factors for Suzuki"}</h1>', unsafe_allow_html=True)
+            st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Number of Topics per Key Factors for Honda"}</h1>', unsafe_allow_html=True)
             with open("honda_piechart.html", "r") as f:
                 html_content1 = f.read()
         # components.v1.html(html_content, width=1200, height=3000, scrolling=True)
@@ -273,8 +273,8 @@ elif tabs == 'Topic Analyzer':
             # st.write("Marketing Mix Tree")
             # Display the HTML content in the Streamlit app within the container
                 components.v1.html(html_content, height=800, scrolling=True)
-        if product == 'Tvs':
-            st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Number of Topics per Key Factors for Suzuki"}</h1>', unsafe_allow_html=True)
+        if product == 'TVS':
+            st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Number of Topics per Key Factors for TVS"}</h1>', unsafe_allow_html=True)
             with open("tvs_piechart.html", "r") as f:
                 html_content1 = f.read()
         # components.v1.html(html_content, width=1200, height=3000, scrolling=True)
@@ -307,19 +307,19 @@ elif tabs == 'Sentiment Analysis':
                 col1.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Likes👍"}</h1>', unsafe_allow_html=True)
                 col1.info('''
                 - **Riding Experience and Road Conditions**: Riders appreciate the smooth handling and comfortable suspension on various road surfaces.
-                - Vehicle Buying Experience: Positive feedback is received for dealerships with straightforward purchasing processes and friendly sales staff.
-                - Vehicle Maintenance and Component Considerations: Owners like the durability of components and reasonable maintenance costs.
-                - Positive Vehicle Experience and Appreciation: Customers express loyalty to the brand and share memorable riding experiences.
-                - Comfort and Quality of Scooter Seating, particularly for long rides: Owners enjoy comfortable seating and ergonomic design for extended journeys.''')
+                - **Vehicle Buying Experience**: Positive feedback is received for dealerships with straightforward purchasing processes and friendly sales staff.
+                - **Vehicle Maintenance and Component Considerations**: Owners like the durability of components and reasonable maintenance costs.
+                - **Positive Vehicle Experience and Appreciation**: Customers express loyalty to the brand and share memorable riding experiences.
+                - **Comfort and Quality of Scooter Seating, particularly for long rides**: Owners enjoy comfortable seating and ergonomic design for extended journeys.''')
 
                 # Customer preferences
                 col2.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Dislikes👎"}</h1>', unsafe_allow_html=True)
                 col2.info('''
-                - Vehicle Starting Issues and Engine Problems: Some users report occasional starting problems and engine issues, which can be frustrating.
-                - Vehicle Body and Design Considerations: There are dislikes related to limited color options and outdated design in certain models.
-                - Mileage and Scooter Comparison, with emphasis on Honda Activa: Some customers are disappointed by lower-than-expected mileage and unfavorable comparisons with Honda Activa.
-                - Issues and Experiences with Scooter Service and Performance: Negative experiences are reported, including frequent service visits and unresolved problems.
-                - Features and Buying Considerations: Some buyers express disappointment with limited feature choices and uninformed purchases.''')
+                - **Vehicle Starting Issues and Engine Problems**: Some users report occasional starting problems and engine issues, which can be frustrating.
+                - **Vehicle Body and Design Considerations**: There are dislikes related to limited color options and outdated design in certain models.
+                - **Mileage and Scooter Comparison, with emphasis on Honda Activa**: Some customers are disappointed by lower-than-expected mileage and unfavorable comparisons with Honda Activa.
+                - **Issues and Experiences with Scooter Service and Performance**: Negative experiences are reported, including frequent service visits and unresolved problems.
+                - **Features and Buying Considerations**: Some buyers express disappointment with limited feature choices and uninformed purchases.''')
                 
                 st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:20px;">{"Key Factors Insights"}</h1>', unsafe_allow_html=True)
                 pb1, pb2, pb3, pb4,pb5,pb6,pb7 = st.tabs(["Body / Design / Looks/ Style","Engine / Performance / Speed","Service & Maintenance","Special Feature, New feature","Competittion","Ride experience / Comfortability","Price, Cost, Buying"])
@@ -393,20 +393,20 @@ elif tabs == 'Sentiment Analysis':
         if product == 'Honda':
                 col1.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Likes👍"}</h1>', unsafe_allow_html=True)
                 col1.info('''
-                - Comparing the Honda Activa's Engine and Riding Experience: Enthusiasts appreciate the comparison of engine performance and riding experience, seeking information to make informed choices.
-                - Exploring the Best Features and Colors for an Awesome and Comfortable Ride: Riders value information on features and colors that enhance the comfort and enjoyment of their motorcycle experience.
-                - Maximizing Mileage and Performance: Riders seek tips on improving engine efficiency, lighting, and smooth riding to enhance their overall motorcycle experience.
-                - Awesome Look and Affordable Price Range of Honda Motorcycles: Buyers appreciate the combination of attractive design and affordability in Honda motorcycles.
-                - Choosing the Perfect Scooty: Prospective buyers are interested in factors to consider when making a scooter purchase, indicating a desire for informed decision-making. ''')
+                - **Comparing the Honda Activa's Engine and Riding Experience**: Enthusiasts appreciate the comparison of engine performance and riding experience, seeking information to make informed choices.
+                - **Exploring the Best Features and Colors for an Awesome and Comfortable Ride**: Riders value information on features and colors that enhance the comfort and enjoyment of their motorcycle experience.
+                - **Maximizing Mileage and Performance**: Riders seek tips on improving engine efficiency, lighting, and smooth riding to enhance their overall motorcycle experience.
+                - **Awesome Look and Affordable Price Range of Honda Motorcycles**: Buyers appreciate the combination of attractive design and affordability in Honda motorcycles.
+                - **Choosing the Perfect Scooty**: Prospective buyers are interested in factors to consider when making a scooter purchase, indicating a desire for informed decision-making. ''')
 
                 # Customer preferences
                 col2.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Dislikes👎"}</h1>', unsafe_allow_html=True)
                 col2.info('''
-                - Honda Scooter Ownership: Some riders may face challenges and common problems with Honda scooters, suggesting potential negative experiences.
-                - Powerful and Attractive Commuter Bikes: There may be concerns or dislikes related to commuter bikes in terms of performance or styling.
-                - Troubleshooting Common Motorcycle Problems: Riders encounter issues related to mileage, speed, and engine performance, which can be seen as negative experiences.
-                - Optimizing Your Honda Motorcycle Service Experience: Riders may have concerns about managing service costs and maintenance, potentially reflecting negative aspects of the ownership experience.
-                - Honda Motorcycle Gear Shift Issues: Some riders may experience gear shift problems, impacting the smoothness of their rides.''')
+                - **Honda Scooter Ownership**: Some riders may face challenges and common problems with Honda scooters, suggesting potential negative experiences.
+                - **Powerful and Attractive Commuter Bikes**: There may be concerns or dislikes related to commuter bikes in terms of performance or styling.
+                - **Troubleshooting Common Motorcycle Problems**: Riders encounter issues related to mileage, speed, and engine performance, which can be seen as negative experiences.
+                - **Optimizing Your Honda Motorcycle Service Experience**: Riders may have concerns about managing service costs and maintenance, potentially reflecting negative aspects of the ownership experience.
+                - **Honda Motorcycle Gear Shift Issues**: Some riders may experience gear shift problems, impacting the smoothness of their rides.''')
                 
                 st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:20px;">{"Key Factors Insights"}</h1>', unsafe_allow_html=True)
                 pb1, pb2, pb3, pb4,pb5,pb6,pb7 = st.tabs(["Body / Design / Looks/ Style","Engine / Performance / Speed","Service & Maintenance","Special Feature, New feature","Competittion","Ride experience / Comfortability","Price, Cost, Buying"])
@@ -466,23 +466,23 @@ elif tabs == 'Sentiment Analysis':
                     - Insights: 
                         1. Customers are discussing the price, cost, and overall value for money when considering buying a scooter.""")
                     
-        if product == 'Tvs':
+        if product == 'TVS':
                 col1.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Likes👍"}</h1>', unsafe_allow_html=True)
                 col1.info('''
-                - Maximizing the Value of Your Motorcycle: Riders appreciate motorcycles that offer superb power, great rides, and smart money choices.
-                - Indian Motorcycle Machines: Enthusiasts enjoy the journey of feel, the competitive pricing, and the riding pleasure that Indian motorcycles provide.
-                - Striking the Perfect Balance in Motorcycle Ownership: Riders value motorcycles that offer good rides, ideal prices, and strong performance, indicating a desire for well-rounded options.
-                - Unleashing Awesome Rides and Sporty Looks: Motorcycle enthusiasts favor motorcycles that offer exciting rides and sporty aesthetics.
-                - The Scooter Revolution: Riders appreciate fuel efficiency, stylish rides, and positive rider experiences when it comes to scooters.''')
+                - **Maximizing the Value of Your Motorcycle**: Riders appreciate motorcycles that offer superb power, great rides, and smart money choices.
+                - **Indian Motorcycle Machines**: Enthusiasts enjoy the journey of feel, the competitive pricing, and the riding pleasure that Indian motorcycles provide.
+                - **Striking the Perfect Balance in Motorcycle Ownership**: Riders value motorcycles that offer good rides, ideal prices, and strong performance, indicating a desire for well-rounded options.
+                - **Unleashing Awesome Rides and Sporty Looks**: Motorcycle enthusiasts favor motorcycles that offer exciting rides and sporty aesthetics.
+                - **The Scooter Revolution**: Riders appreciate fuel efficiency, stylish rides, and positive rider experiences when it comes to scooters.''')
 
                 # Customer preferences
                 col2.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Dislikes👎"}</h1>', unsafe_allow_html=True)
                 col2.info('''
-               - Navigating Service Challenges and Making Informed Buying Decisions: Some riders express frustration with service challenges, and there is a need for better information to make informed buying decisions.
-                - Troubleshooting Vehicle Issues, Starting Strong, and Self-Improvement: Riders face challenges with troubleshooting vehicle issues and starting problems, which can be seen as negative experiences.
-                - The Art of Riding: There are concerns or dislikes related to aspects of motorcycle aesthetics or style.
-                - Elevating the Scooter Experience: Some riders may have reservations about the scooter experience, possibly due to expectations of greater innovation.
-                - Navigating the World of Motorcycle Ownership: Negative experiences are reported, including challenges with service, maintenance, and the overall rider's journey.''')
+                - **Navigating Service Challenges and Making Informed Buying Decisions**: Some riders express frustration with service challenges, and there is a need for better information to make informed buying decisions.
+                - **Troubleshooting Vehicle Issues, Starting Strong, and Self-Improvement**: Riders face challenges with troubleshooting vehicle issues and starting problems, which can be seen as negative experiences.
+                - **The Art of Riding**: There are concerns or dislikes related to aspects of motorcycle aesthetics or style.
+                - **Elevating the Scooter Experience**: Some riders may have reservations about the scooter experience, possibly due to expectations of greater innovation.
+                - **Navigating the World of Motorcycle Ownership**: Negative experiences are reported, including challenges with service, maintenance, and the overall rider's journey.''')
                
                 st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Key Factors Insights"}</h1>', unsafe_allow_html=True)
                 pb1, pb2, pb3, pb4,pb5,pb6,pb7 = st.tabs(["Body / Design / Looks/ Style","Engine / Performance / Speed","Service & Maintenance","Special Feature, New feature","Competittion","Ride experience / Comfortability","Price, Cost, Buying"])
@@ -562,7 +562,7 @@ elif tabs == 'Competitive Analysis':
         coll1.metric("Suzuki", 7385)
         coll2.metric("Honda", 1846)
         coll3.metric("TVS", 1033)
-        st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Mean Polarity across Brands"}</h1>', unsafe_allow_html=True)
+        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:20px;">{"Mean Polarity across Brands"}</h1>', unsafe_allow_html=True)
         st.info("Percentage of Positive, Neutral and Negative feedback across different products. We have selected Positive reviews with polarity score > 0.4, Neutral reviews within 0.2 to 0.4 & Negative reviews below 0.2 (Polarity scores are calculated using machine learning for sentiment analysis on text data. It ranges between -1 to 1). ")
         col1, col2, col3 = st.columns(3)
         lst = ['Green', 'Orange', 'Red']
@@ -620,7 +620,7 @@ elif tabs == 'Competitive Analysis':
                 elif metric_key == 'Neutral':
                     metric_value = f'<span style="color:orange;">{metric_value}</span>'
                 st.markdown(f'{metric_key}: {metric_value}', unsafe_allow_html=True)
-        st.subheader('Overall Polarity : ')
+        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:20px;">{"Overall Polarity :"}</h1>', unsafe_allow_html=True)
 
         col1, col2, col3 = st.columns(3)
         col1.metric("Suzuki", 0.392)
