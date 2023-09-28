@@ -198,24 +198,11 @@ elif tabs == 'Topic Analyzer':
             product_b = product_b[['Subtopic','Count']]
             product_b['Count']=product_b['Count'].astype('int')
             
-            df = pd.DataFrame(product_b[['Subtopic','Count']], columns=['Subtopic','Count'])
-            source=pd.melt(df, id_vars=['model'])
-
-            chart=alt.Chart(source).mark_bar(strokeWidth=100).encode(
-            x=alt.X('variable:N', title="", scale=alt.Scale(paddingOuter=0.5)),#paddingOuter - you can play with a space between 2 models 
-            y='value:Q',
-            color='variable:N',
-            column=alt.Column('model:N', title="", spacing =0), #spacing =0 removes space between columns, column for can and st 
-            ).properties( width = 300, height = 300, ).configure_header(labelOrient='bottom').configure_view(
-            strokeOpacity=0)
-
-            st.altair_chart(chart) #, use_container_width=True)
-
-            # chart_data = pd.DataFrame( product_b['Count'],index=product_b['Subtopic'])
+            chart_data = pd.DataFrame(product_b['Count'],index=product_b['Subtopic'])
             # # chart_data = pd.DataFrame(product_b, columns=["Subtopic", "Count"])
             # st.bar_chart(chart_data)
             # Vertical stacked bar chart
-            # st.bar_chart(chart_data)
+            st.bar_chart(chart_data)
             st.dataframe(product_b)
 
         if product == 'Honda':
