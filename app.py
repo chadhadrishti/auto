@@ -194,6 +194,7 @@ elif tabs == 'Topic Analyzer':
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Extracted SubTopics and Topics"}</h1>', unsafe_allow_html=True)
         if product == 'Suzuki':
             product_b = pd.read_csv('Suzuki_subtopic_topic.csv')
+            product_b = product_b[['Subtopic','Count']]
             st.dataframe(product_b)
 
         if product == 'Honda':
