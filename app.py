@@ -199,10 +199,12 @@ elif tabs == 'Topic Analyzer':
 
         if product == 'Honda':
             product_a = pd.read_csv('Honda_subtopic_topic.csv')
+            product_a = product_a[['Subtopic','Count']]
             st.dataframe(product_a)
 
         if product == 'TVS':
             product_a = pd.read_csv('TVS_subtopic_topic.csv')
+            product_a = product_a[['Subtopic','Count']]
             st.dataframe(product_a)
             
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Topic Insights For Brand: Likes & Dislikes"}</h1>', unsafe_allow_html=True)
