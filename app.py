@@ -198,10 +198,7 @@ elif tabs == 'Topic Analyzer':
             x = product_b['Subtopic']
             y = product_b['Count']
             # using the pyplot.bar funtion
-            plt.bar(x,y)
-
-            # to show our graph
-            plt.show()
+            st.plt.bar(x,y).show()
             
             st.dataframe(product_b)
 
