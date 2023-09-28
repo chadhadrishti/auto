@@ -299,7 +299,7 @@ elif tabs == 'Sentiment Analysis':
         st.write(f'<h1 style="margin-top:-20px;color:#094780;font-size:30px;">{"Customer Sentiment"}</h1>', unsafe_allow_html=True)
         # st.title("Customer Sentiment")
         # st.write('Customer Sentiment'.format(tabs))
-        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Topic Insights For Brand: Likes & Dislikes"}</h1>', unsafe_allow_html=True)
+        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:20px;">{"Topic Insights For Brand: Likes & Dislikes"}</h1>', unsafe_allow_html=True)
         # if product == 'Suzuki':
         col1, col2 = st.columns(2)
         # with st.expander("Click to see insights"):
