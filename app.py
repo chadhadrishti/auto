@@ -202,7 +202,7 @@ elif tabs == 'Topic Analyzer':
             # chart_data = pd.DataFrame(product_b, columns=["Subtopic"])
             # st.bar_chart(chart_data)
             # Vertical stacked bar chart
-            st.bar_chart(product_b, x= "Subtopic",y="Count")
+            st.bar_chart(product_b, x= "Count",y="Subtopic")
             st.dataframe(product_b)
 
         if product == 'Honda':
