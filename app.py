@@ -118,8 +118,8 @@ st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_ht
 # sac.divider(label='🏠', align='center')
 
 with st.sidebar:
-    tabs = on_hover_tabs(tabName=['Home','Approach', 'EDA','Topic Analyzer','Sentiment Analysis','Competitive Analysis'], 
-                         iconName=['🏠','🚀', '📊','💡','💭','🏆'], 
+    tabs = on_hover_tabs(tabName=['Home','Approach', 'EDA','Topic Analyzer','Key Insights','Competitive Analysis'], 
+                         iconName=['🏠','🚀', '📊','💡','📈','🏆'], 
                          styles = {'navtab': {'background-color':'#083d6e',
                                                   'color': '#adb0b3',
                                                   'font-size': '17px',
@@ -294,9 +294,9 @@ elif tabs == 'Topic Analyzer':
             # Display the HTML content in the Streamlit app within the container
                 components.v1.html(html_content, height=800, scrolling=True)
 
-elif tabs == 'Sentiment Analysis':
-        sac.divider(label='💭', align='center')
-        st.write(f'<h1 style="margin-top:-20px;color:#094780;font-size:30px;">{"Customer Sentiment"}</h1>', unsafe_allow_html=True)
+elif tabs == 'Key Insights':
+        sac.divider(label='📈', align='center')
+        # st.write(f'<h1 style="margin-top:-20px;color:#094780;font-size:30px;">{"Customer Sentiment"}</h1>', unsafe_allow_html=True)
         # st.title("Customer Sentiment")
         # st.write('Customer Sentiment'.format(tabs))
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:20px;">{"Topic Insights For Brand: Likes & Dislikes"}</h1>', unsafe_allow_html=True)
