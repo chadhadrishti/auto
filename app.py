@@ -151,7 +151,7 @@ elif tabs =='Approach':
         # st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:15px;">{"Toggle between the selected brands to derive insights for different Key takeaways:"}</h1>', unsafe_allow_html=True)
         st.image('Approach2.png', use_column_width=True)
         st.write(f'<h1 style="margin-top:-40px;text-align: left;color:#094780;font-size:30px;">{"Machine Learning Techniques Used:"}</h1>', unsafe_allow_html=True)
-        st.write(f'<h1 style="margin-top:-30px;text-align: left;color:#EC2A39;font-size:20px;">{"Topic Modeling"}</h1>', unsafe_allow_html=True)
+        st.write(f'<h1 style="text-align: left;color:#EC2A39;font-size:20px;">{"Topic Modeling"}</h1>', unsafe_allow_html=True)
         st.info(
         """
         Topic modeling is a machine learning technique used to analyze and categorize large volumes of text data. It identifies recurring patterns or themes, known as 'topics,' within the text.
