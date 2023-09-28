@@ -233,25 +233,25 @@ elif tabs == 'Topic Analyzer':
         col7.info('💲 Price, Cost, Buying')
     
         if product == 'Suzuki':
-        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Number of Topics per Key Factors for Suzuki"}</h1>', unsafe_allow_html=True)
-        with open("suzuki_piechart.html", "r") as f:
-            html_content1 = f.read()
+            st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Number of Topics per Key Factors for Suzuki"}</h1>', unsafe_allow_html=True)
+            with open("suzuki_piechart.html", "r") as f:
+                html_content1 = f.read()
         # components.v1.html(html_content, width=1200, height=3000, scrolling=True)
 
-        with st.container():
+            with st.container():
             # st.write("Marketing Mix Tree")
             # Display the HTML content in the Streamlit app within the container
-            components.v1.html(html_content1, height=500, scrolling=False)
+                components.v1.html(html_content1, height=500, scrolling=False)
 
-        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Automotive Key Factors Tree for Suzuki"}</h1>', unsafe_allow_html=True)
-        with open("tree.html", "r") as f:
-            html_content = f.read()
+            st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Automotive Key Factors Tree for Suzuki"}</h1>', unsafe_allow_html=True)
+            with open("tree.html", "r") as f:
+                html_content = f.read()
         # components.v1.html(html_content, width=1200, height=3000, scrolling=True)
 
-        with st.container():
+            with st.container():
             # st.write("Marketing Mix Tree")
             # Display the HTML content in the Streamlit app within the container
-            components.v1.html(html_content, height=800, scrolling=True)
+                components.v1.html(html_content, height=800, scrolling=True)
 
 elif tabs == 'Sentiment Analysis':
         sac.divider(label='💭', align='center')
