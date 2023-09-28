@@ -631,7 +631,12 @@ elif tabs == 'Competitive Analysis':
         st.write(f'<h1 style="margin-top:-15px;color:#094780;font-size:15px;">{"Polarity across different Subtopics"}</h1>', unsafe_allow_html=True)
         col1, col2 = st.columns(2)
         col1.metric("Overall Polarity","")
-        col1.image('Key_Factor0.png',width=500)
+        dff = pd.read_csv('mean_polarity.csv')
+        dff = dff[['Brand','Overall Polarity']]
+        dff['Overall Polarity']=dff['Overall Polarity'].astype('float')
+        col1.bar_chart(dff, x= "Brand",y="Overall Polarity")
+
+        # col1.image('Key_Factor0.png',width=500)
         # col1.metric("Overall Polarity","")
         # col11.metric("Amazon", Amazon_count)
         col2.metric("Body/Design/Looks/Style","")
