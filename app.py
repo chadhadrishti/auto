@@ -559,7 +559,7 @@ elif tabs == 'Competitive Analysis':
     # col22.metric("Wallmart", Wallmart_count)
         col3.image('tvs_logo.png', width=200)
         coll1, coll2, coll3 = st.columns(3)
-        coll1.metric("Suzuki", 7385)
+        coll1.metric("Suzuki", **7385**)
         coll2.metric("Honda", 1846)
         coll3.metric("TVS", 1033)
         st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:20px;">{"Mean Polarity across Brands"}</h1>', unsafe_allow_html=True)
