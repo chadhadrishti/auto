@@ -195,7 +195,7 @@ elif tabs == 'Topic Analyzer':
         if product == 'Suzuki':
             product_b = pd.read_csv('Suzuki_subtopic_topic.csv')
             product_b = product_b[['Subtopic','Count']]
-            product_b['Subtopic']=product_b['Count'].astype('int')
+            product_b['Count']=product_b['Count'].astype('int')
             chart_data = pd.DataFrame(product_b, columns=["Subtopic", "Count"])
             st.bar_chart(chart_data, x="Count", y="Subtopic")
             # Vertical stacked bar chart
