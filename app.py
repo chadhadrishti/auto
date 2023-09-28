@@ -195,11 +195,12 @@ elif tabs == 'Topic Analyzer':
         if product == 'Suzuki':
             product_b = pd.read_csv('Suzuki_subtopic_topic.csv')
             product_b = product_b[['Subtopic','Count']]
+            chart_data = pd.DataFrame(y,x)
+            st.bar_chart(chart_data)
             x = product_b['Subtopic']
             y = product_b['Count']
             # using the pyplot.bar funtion
-            plt.bar(x,y)
-            st.plt.show()
+            st.bar_chart(y,x)
             st.dataframe(product_b)
 
         if product == 'Honda':
