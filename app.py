@@ -321,7 +321,7 @@ elif tabs == 'Sentiment Analysis':
                 - Issues and Experiences with Scooter Service and Performance: Negative experiences are reported, including frequent service visits and unresolved problems.
                 - Features and Buying Considerations: Some buyers express disappointment with limited feature choices and uninformed purchases.''')
                 
-                st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Key Factors Insights"}</h1>', unsafe_allow_html=True)
+                st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:20px;">{"Key Factors Insights"}</h1>', unsafe_allow_html=True)
                 pb1, pb2, pb3, pb4,pb5,pb6,pb7 = st.tabs(["Body / Design / Looks/ Style","Engine / Performance / Speed","Service & Maintenance","Special Feature, New feature","Competittion","Ride experience / Comfortability","Price, Cost, Buying"])
 
                 with pb1:
@@ -391,7 +391,7 @@ elif tabs == 'Sentiment Analysis':
                         2. The cost of purchasing the scooter is a key decision-making factor.""")
                     
         if product == 'Honda':
-                col1.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Likes👍"}</h1>', unsafe_allow_html=True)
+                col1.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:20px;">{"Likes👍"}</h1>', unsafe_allow_html=True)
                 col1.info('''
                 - Comparing the Honda Activa's Engine and Riding Experience: Enthusiasts appreciate the comparison of engine performance and riding experience, seeking information to make informed choices.
                 - Exploring the Best Features and Colors for an Awesome and Comfortable Ride: Riders value information on features and colors that enhance the comfort and enjoyment of their motorcycle experience.
@@ -408,7 +408,7 @@ elif tabs == 'Sentiment Analysis':
                 - Optimizing Your Honda Motorcycle Service Experience: Riders may have concerns about managing service costs and maintenance, potentially reflecting negative aspects of the ownership experience.
                 - Honda Motorcycle Gear Shift Issues: Some riders may experience gear shift problems, impacting the smoothness of their rides.''')
                 
-                st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Key Factors Insights"}</h1>', unsafe_allow_html=True)
+                st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:20px;">{"Key Factors Insights"}</h1>', unsafe_allow_html=True)
                 pb1, pb2, pb3, pb4,pb5,pb6,pb7 = st.tabs(["Body / Design / Looks/ Style","Engine / Performance / Speed","Service & Maintenance","Special Feature, New feature","Competittion","Ride experience / Comfortability","Price, Cost, Buying"])
 
                 with pb1:
@@ -547,6 +547,110 @@ elif tabs == 'Sentiment Analysis':
                     
 elif tabs == 'Competitive Analysis':
         sac.divider(label='🏆', align='center')
-        st.title("Competition")
-        st.write('Competition - Suzuki/Honda/TVS'.format(tabs))
+        # st.title("Competition")
+        st.write(f'<h1 style="margin-top:-20px;color:#094780;font-size:30px;">{"Competition"}</h1>', unsafe_allow_html=True)
+        st.info('This is an analysis of customer reviews across bike segment of its competitors.')
+        st.write(f'<h1 style="margin-top:-15px;color:#094780;font-size:15px;">{"Total Data collected for different Brands"}</h1>', unsafe_allow_html=True)
+        col1, col2, col3 = st.columns(3)
     
+        col1.image('suzuki_logo.png',width=200)
+    # col11.metric("Amazon", Amazon_count)
+        col2.image('Honda_logo.png',width=200)
+    # col22.metric("Wallmart", Wallmart_count)
+        col3.image('tvs_logo.png', width=200)
+        coll1, coll2, coll3 = st.columns(3)
+        coll1.metric("Suzuki", 7385)
+        coll2.metric("Honda", 1846)
+        coll3.metric("TVS", 1033)
+        st.write(f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Mean Polarity across Brands"}</h1>', unsafe_allow_html=True)
+        st.info("Percentage of Positive, Neutral and Negative feedback across different products. We have selected Positive reviews with polarity score > 0.4, Neutral reviews within 0.2 to 0.4 & Negative reviews below 0.2 (Polarity scores are calculated using machine learning for sentiment analysis on text data. It ranges between -1 to 1). ")
+        col1, col2, col3 = st.columns(3)
+        lst = ['Green', 'Orange', 'Red']
+        with col1:
+            st.subheader("Suzuki")
+            emo_dict = {
+                "Positive": str(63.78) + "%",
+                "Neutral": str(15.75) + "%",
+                "Negative": str(20.47) + "%"
+            }
+            metrics = list(emo_dict.items())
+
+        # Display each metric using st.metric
+            for metric_key, metric_value in emo_dict.items():
+                if metric_key == 'Negative':
+                    metric_value = f'<span style="color:red;">{metric_value}</span>'
+                elif metric_key == 'Positive':
+                    metric_value = f'<span style="color:green;">{metric_value}</span>'
+                elif metric_key == 'Neutral':
+                    metric_value = f'<span style="color:orange;">{metric_value}</span>'
+                st.markdown(f'{metric_key}: {metric_value}', unsafe_allow_html=True)
+
+        with col2:
+            st.subheader("Honda")
+            emo_dict = {
+                "Positive": str(80.85) + "%",
+                "Neutral": str(7.80) + "%",
+                "Negative": str(11.35) + "%"
+            }
+            metrics = list(emo_dict.items())
+
+            for metric_key, metric_value in emo_dict.items():
+                if metric_key == 'Negative':
+                    metric_value = f'<span style="color:red;">{metric_value}</span>'
+                elif metric_key == 'Positive':
+                    metric_value = f'<span style="color:green;">{metric_value}</span>'
+                elif metric_key == 'Neutral':
+                    metric_value = f'<span style="color:orange;">{metric_value}</span>'
+                st.markdown(f'{metric_key}: {metric_value}', unsafe_allow_html=True)
+
+        with col3:
+            st.subheader("TVS")
+            emo_dict = {
+                "Positive": str(79.765) + "%",
+                "Neutral": str(13.35) + "%",
+                "Negative": str(6.87) + "%"
+            }
+            metrics = list(emo_dict.items())
+
+            for metric_key, metric_value in emo_dict.items():
+                if metric_key == 'Negative':
+                    metric_value = f'<span style="color:red;">{metric_value}</span>'
+                elif metric_key == 'Positive':
+                    metric_value = f'<span style="color:green;">{metric_value}</span>'
+                elif metric_key == 'Neutral':
+                    metric_value = f'<span style="color:orange;">{metric_value}</span>'
+                st.markdown(f'{metric_key}: {metric_value}', unsafe_allow_html=True)
+        st.subheader('Overall Polarity : ')
+
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Suzuki", 0.392)
+        col2.metric("Honda", 0.618)
+        col3.metric("TVS", 0.519)
+    # col4.metric("K", scores['Polarity Scores'][3])
+
+        st.write(f'<h1 style="margin-top:-15px;color:#094780;font-size:15px;">{"Polarity across different Subtopics"}</h1>', unsafe_allow_html=True)
+        col1, col2 = st.columns(2)
+        col1.metric("Overall Polarity","")
+        col1.image('Key_Factor0.png',width=500)
+        # col1.metric("Overall Polarity","")
+        # col11.metric("Amazon", Amazon_count)
+        col2.metric("Body/Design/Looks/Style","")
+        col2.image('Key_Factor1.png',width=500)
+        coll1, coll2 = st.columns(2)
+        coll1.metric("Engine/Performance/Speed","")
+        coll1.image('Key_Factor2.png',width=500)
+    # col11.metric("Amazon", Amazon_count)
+        coll2.metric("Service & Maintenance","")
+        coll2.image('Key_Factor3.png',width=500)
+        colll1, colll2 = st.columns(2)
+        colll1.metric("Special Feature, New Feature","")
+        colll1.image('Key_Factor4.png',width=500)
+    # col11.metric("Amazon", Amazon_count)
+        colll2.metric("Competition","")
+        colll2.image('Key_Factor5.png',width=500)
+        collll1, collll2 = st.columns(2)
+        collll1.metric("Ride Experience/Comfortability","")
+        collll1.image('Key_Factor6.png',width=500)
+    # col11.metric("Amazon", Amazon_count)
+        collll2.metric("Price, Cost, Buying","")
+        collll2.image('Key_Factor7.png',width=500)
