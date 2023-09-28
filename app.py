@@ -189,20 +189,43 @@ elif tabs == 'EDA':
 
 elif tabs == 'Topic Analyzer':
         sac.divider(label='💡', align='center')
-        st.title("Topics")
-        st.write('7 key topics'.format(tabs))
-        st.subheader("Extracted SubTopics and Topics")
+        st.write(f'<h1 style="margin-top:-20px;color:#094780;font-size:30px;">{"Topic Analyzer"}</h1>', unsafe_allow_html=True)
+        # st.title("Topics")
+        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Extracted SubTopics and Topics"}</h1>', unsafe_allow_html=True)
         if product == 'Suzuki':
             product_b = pd.read_csv('Suzuki_subtopic_topic.csv')
             st.dataframe(product_b)
 
-        # if product == 'Honda':
-        # product_a = pd.read_csv('Honda_subtopic_topic.csv')
-        # st.dataframe(product_a)
+        if product == 'Honda':
+            product_a = pd.read_csv('Honda_subtopic_topic.csv')
+            st.dataframe(product_a)
 
-        # if product == 'TVS':
-        # product_a = pd.read_csv('TVS_subtopic_topic.csv')
-        # st.dataframe(product_a)
+        if product == 'TVS':
+            product_a = pd.read_csv('TVS_subtopic_topic.csv')
+            st.dataframe(product_a)
+                st.subheader("Topic Insights For Brand")
+            
+        st.write(f'<h1 style="margin-top:-20px;text-align: left;color:#9FACB8;font-size:25px;">{"Likes & Dislikes"}</h1>', unsafe_allow_html=True)
+        if product == 'Suzuki':
+        col1, col2 = st.columns(2)
+        # with st.expander("Click to see insights"):
+            if product == 'Suzuki':
+                col1.write((f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Likes👍"}</h1>', unsafe_allow_html=True)
+                col1.info('''
+                - Riding Experience and Road Conditions: Riders appreciate the smooth handling and comfortable suspension on various road surfaces.
+                - Vehicle Buying Experience: Positive feedback is received for dealerships with straightforward purchasing processes and friendly sales staff.
+                - Vehicle Maintenance and Component Considerations: Owners like the durability of components and reasonable maintenance costs.
+                - Positive Vehicle Experience and Appreciation: Customers express loyalty to the brand and share memorable riding experiences.
+                - Comfort and Quality of Scooter Seating, particularly for long rides: Owners enjoy comfortable seating and ergonomic design for extended journeys.''')
+
+                # Customer preferences
+                col2.write((f'<h1 style="margin-top:-20px;text-align: center;color:#9FACB8;font-size:20px;">{"Dislikes👍"}</h1>', unsafe_allow_html=True)
+                col2.info('''
+                - Vehicle Starting Issues and Engine Problems: Some users report occasional starting problems and engine issues, which can be frustrating.
+                - Vehicle Body and Design Considerations: There are dislikes related to limited color options and outdated design in certain models.
+                - Mileage and Scooter Comparison, with emphasis on Honda Activa: Some customers are disappointed by lower-than-expected mileage and unfavorable comparisons with Honda Activa.
+                - Issues and Experiences with Scooter Service and Performance: Negative experiences are reported, including frequent service visits and unresolved problems.
+                - Features and Buying Considerations: Some buyers express disappointment with limited feature choices and uninformed purchases.''')
 
 elif tabs == 'Sentiment Analysis':
         sac.divider(label='💭', align='center')
